@@ -35,3 +35,5 @@ const YourComponent = () => {
     </motion.div>
   );
 };
+
+export default YourComponent;

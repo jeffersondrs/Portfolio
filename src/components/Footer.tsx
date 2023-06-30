@@ -1,0 +1,53 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Twitter, Github, Linkedin } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="flex justify-center items-center w-full p-10 bg-gray-100 flex-col">
+      <div className="flex flex-row gap-3">
+        <Link href="https://twitter.com/kalliadranoth">
+          <Twitter
+            size={40}
+            className="hover:text-white transition-all duration-200 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400"
+          />
+        </Link>
+        <Link href="https://github.com/jeffersondrs">
+          <Github
+            size={40}
+            className="hover:text-white transition-all duration-200 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900"
+          />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/jeffersondrs/">
+          <Linkedin
+            size={40}
+            className="hover:text-white transition-all duration-200 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700"
+          />
+        </Link>
+      </div>
+      <div className="flex flex-row gap-3 mt-5">
+        <p className="tracking-wider">
+          Made with <span className="text-red-500">❤️</span> by{" "}
+          <Link
+            className="text-blue-500 hover:text-blue-700 transition-all duration-200 ease-in-out"
+            href="
+          https://twitter.com/kalliadranoth"
+          >
+            Jefferson Santos
+          </Link>
+        </p>
+      </div>
+      <div>
+        <p className="text-sm text-gray-500">
+          © Copyrigth {
+            new Date().getFullYear()
+          } - All rights reserved
+        </p>
+      </div>
+    </footer>
+  );
+}
