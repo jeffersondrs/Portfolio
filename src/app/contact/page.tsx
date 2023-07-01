@@ -6,11 +6,6 @@ import Menu from "@/components/Menu";
 import { ThemeContext } from "@/context/ThemeProvider";
 import { useContext } from "react";
 
-export const metadata = {
-  title: "Contato",
-  description: "Página de contatos",
-};
-
 export default function ContactPage() {
   const { isDark } = useContext(ThemeContext);
   return (
