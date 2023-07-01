@@ -4,10 +4,18 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Twitter, Github, Linkedin } from "lucide-react";
+import { ThemeContext } from "@/context/ThemeProvider";
+import { useContext } from "react";
 
 export default function Footer() {
+  const { isDark } = useContext(ThemeContext);
   return (
-    <footer className="flex justify-center items-center w-full p-10 bg-gray-100 flex-col">
+    <footer
+      className={`
+      ${isDark ? "bg-gray-900 text-white" : "bg-gray-200/60 text-black"}
+      flex justify-center items-center w-full p-10 bg-gray-100 flex-col
+    `}
+    >
       <div className="flex flex-row gap-3">
         <Link href="https://twitter.com/kalliadranoth">
           <Twitter
@@ -43,9 +51,7 @@ export default function Footer() {
       </div>
       <div>
         <p className="text-sm text-gray-500">
-          © Copyrigth {
-            new Date().getFullYear()
-          } - All rights reserved
+          © Copyrigth {new Date().getFullYear()} - All rights reserved
         </p>
       </div>
     </footer>

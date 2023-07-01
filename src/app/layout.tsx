@@ -2,6 +2,7 @@ import Navegation from "@/components/Navegation";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 export const metadata = {
   title: "Home Page",
@@ -20,9 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Navegation>{children}</Navegation>
-        <Footer />
+      <body className={`${poppins.className}`}>
+        <ThemeProvider>
+          <Navegation>{children}</Navegation>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -3,60 +3,62 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import Menu from "./Menu";
-
+import { ThemeContext } from "@/context/ThemeProvider";
+import { useContext } from "react";
+import ToggoeButton from "./ToggleButton";
 interface NavegationProps {
   children?: React.ReactNode;
 }
 
 export default function Navegation({ children }: NavegationProps) {
+  const { isDark } = useContext(ThemeContext);
   return (
     <>
-      <nav className="flex w-full justify-evenly items-center px-4 py-2 pr-10">
-        <div
-          className="hover:translate-x-3 hover:translate-y-3 transition-all 
-        duration-300 ease-in-out transform cursor-pointer
-        "
-        >
-          <motion.p
-            whileHover={{
-              translateX: 20,
-              scaleX: 1.3,
-            }}
-            transition={{
-              duration: 3,
-              repeat: 1,
-            }}
-            className="text-2xl"
-          >
-            <span
-              className="text-4xl bg-yellow-400 px-2 border 
-            border-black"
+      <nav
+        className={`
+      ${isDark ? "bg-gray-950 text-white" : "bg-gray-100 text-black"}
+      flex w-full justify-evenly items-center px-4 py-2 pr-10
+      `}
+      >
+        <div>
+          <div className="flex flex-row gap-2 items-center">
+            <motion.span
+              initial={{ translateX: -35, opacity: 1 }}
+              animate={{ translateX: 12 }}
+              transition={{ duration: 1 }}
+              className="text-4xl bg-yellow-400 px-2"
             >
               J
-            </span>
-            <span>efferson</span>
-          </motion.p>
-          <p className="text-2xl translate-x-4 translate-y-3">
-            <span
-              className="bg-yellow-400 px-2 text-4xl border 
-            border-black
-            "
+            </motion.span>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 2 }}
+              className="text-2xl px-1"
+            >
+              efferson
+            </motion.p>
+          </div>
+          <div className="flex flex-row gap-2 items-center">
+            <motion.span
+              initial={{ translateY: -40, opacity: 1 }}
+              animate={{ translateY: 0, translateX: 22 }}
+              transition={{ duration: 1 }}
+              className="text-4xl bg-yellow-400 px-2"
             >
               S
-            </span>
-            <span
-              className="text-2xl
-            "
+            </motion.span>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, translateX: 10 }}
+              transition={{ duration: 1, delay: 2 }}
+              className="text-2xl px-1"
             >
               antos
-            </span>
-          </p>
+            </motion.p>
+          </div>
         </div>
-        {/* <div className="">
-          <Menu />
-        </div> */}
-
+        <ToggoeButton />
         <div
           className="flex items-center space-x-4 sm:hidden transition-all 
         duration-500 ease-in-out transform cursor-pointer
