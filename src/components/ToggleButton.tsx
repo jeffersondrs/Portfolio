@@ -6,33 +6,33 @@ import { useContext } from "react";
 
 export default function ToggoeButton() {
   const [isOn, setIsOn] = useState(false);
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, isDark } = useContext(ThemeContext);
   const toggleSwitch = () => setIsOn(!isOn);
 
   return (
     <div
-      className={`w-32 bg-gray-200 flex justify-start rounded-full p-2 cursor-pointer ${
+      className={`w-20 sm:w-16 flex justify-start rounded-full p-1 sm:p-0 cursor-pointer ${
         isOn ? "justify-end" : "justyfy-start"
       }
+      ${isDark ? "bg-gray-600" : "bg-gray-200"}
     `}
-      data-isOn={isOn}
       onClick={() => {
         toggleSwitch();
         toggleTheme();
       }}
     >
       <motion.div
-        className={`w-16 h-10 rounded-full flex justify-center items-center shadow-xl ${
-          isOn ? "bg-black text-white" : "bg-white text-black"
+        className={`w-10 h-6 sm:w-10 sm:border sm:h-6 rounded-full flex justify-center items-center shadow-xl ${
+          isOn ? "bg-black text-white sm:border-white" : "bg-white text-black sm:border-black"
         }
       `}
         layout
         transition={spring}
       >
         {isOn ? (
-          <span className="text-xl">Dark</span>
+          <span className="text-xs">Dark</span>
         ) : (
-          <span className="text-xl">Light</span>
+          <span className="text-xs">Light</span>
         )}
       </motion.div>
     </div>

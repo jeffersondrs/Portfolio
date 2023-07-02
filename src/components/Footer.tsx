@@ -20,20 +20,20 @@ export default function Footer() {
         <Link href="https://twitter.com/kalliadranoth">
           <Twitter
             size={40}
-            className="hover:text-white transition-all duration-200 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400"
           />
         </Link>
         <Link href="https://github.com/jeffersondrs">
           <Github
             size={40}
-            className="hover:text-white transition-all duration-200 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900"
           />
         </Link>
 
         <Link href="https://www.linkedin.com/in/jeffersondrs/">
           <Linkedin
             size={40}
-            className="hover:text-white transition-all duration-200 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700"
           />
         </Link>
       </div>
