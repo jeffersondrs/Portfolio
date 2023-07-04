@@ -48,7 +48,7 @@ export const Carroucel = ({ images }: CaroucelProps) => {
   };
 
   return (
-    <div className=" w-full min-w-fit h-96 relative flex justify-center items-center rounded-xl overflow-hidden">
+    <div className="w-full min-w-fit h-80 relative flex justify-center items-center overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}

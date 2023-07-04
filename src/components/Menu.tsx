@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { motion, Variants } from "framer-motion";
-import { MenuToggle } from "./MenuToggle";
-import Link from "next/link";
-import { ThemeContext } from "@/context/ThemeProvider";
-import { useContext } from "react";
-import { HomeIcon, MessageSquare, User2 } from "lucide-react";
+import { useState } from 'react';
+import { motion, Variants } from 'framer-motion';
+import { MenuToggle } from './MenuToggle';
+import Link from 'next/link';
+import { ThemeContext } from '@/context/ThemeProvider';
+import { useContext } from 'react';
+import { HomeIcon, MessageSquare, User2 } from 'lucide-react';
 
 const itemVariants: Variants = {
   open: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 },
+    transition: { type: 'spring', stiffness: 300, damping: 24 },
   },
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
@@ -22,35 +22,16 @@ export default function App() {
   return (
     <motion.nav
       initial={false}
-      animate={isOpen ? "open" : "closed"}
-      className="flex flex-col absolute top-0 right-0 z-50 justify-center items-center"
+      animate={isOpen ? 'open' : 'closed'}
+      className="flex flex-col absolute top-0 -right-8 z-50 justify-center items-center"
     >
-      {/* <motion.button
-        whileTap={{ scale: 0.97 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex flex-row justify-between items-center  p-3 bg-gray-100 rounded-md shadow-md focus:outline-none sm:hidden"
-      >
-        Menu
-        <motion.div
-          variants={{
-            open: { rotate: 180 },
-            closed: { rotate: 0 },
-          }}
-          transition={{ duration: 0.2 }}
-          style={{ originY: 0.55 }}
-        >
-          <svg width="15" height="15" viewBox="0 0 20 20">
-            <path d="M0 7 L 20 7 L 10 16" />
-          </svg>
-        </motion.div>
-      </motion.button> */}
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <motion.ul
         variants={{
           open: {
-            clipPath: "inset(0% 0% 0% 0% round 10px)",
+            clipPath: 'inset(0% 0% 0% 0% round 10px)',
             transition: {
-              type: "spring",
+              type: 'spring',
               bounce: 0,
               duration: 0.7,
               delayChildren: 0.3,
@@ -58,28 +39,28 @@ export default function App() {
             },
           },
           closed: {
-            clipPath: "inset(10% 50% 90% 50% round 10px)",
+            clipPath: 'inset(10% 50% 90% 50% round 10px)',
             transition: {
-              type: "spring",
+              type: 'spring',
               bounce: 0,
               duration: 0.3,
             },
           },
         }}
-        style={{ pointerEvents: isOpen ? "auto" : "none" }}
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
         className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-32 ${
-          isOpen ? "bg-gray-100" : "bg-gray-200"
+          isOpen ? 'bg-gray-200' : 'bg-gray-100'
         }
-          ${isDark ? "bg-gray-900" : "bg-gray-100"}
+          ${isDark ? 'bg-gray-900' : 'bg-gray-100'}
         `}
       >
-        <Link href={"/"}>
+        <Link href={'/'}>
           <motion.li
             className={`
             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
               isDark
-                ? "text-white hover:bg-gray-700"
-                : "text-black hover:bg-gray-200"
+                ? 'text-white hover:bg-gray-700'
+                : 'text-black hover:bg-gray-400'
             }
              `}
             variants={itemVariants}
@@ -88,13 +69,13 @@ export default function App() {
             Home
           </motion.li>
         </Link>
-        <Link href={"/about"}>
+        <Link href={'/about'}>
           <motion.li
             className={`
              p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
                isDark
-                 ? "text-white hover:bg-gray-700"
-                 : "text-black hover:bg-gray-200"
+                 ? 'text-white hover:bg-gray-700'
+                : 'text-black hover:bg-gray-400'
              }            `}
             variants={itemVariants}
           >
@@ -102,13 +83,13 @@ export default function App() {
             Sobre
           </motion.li>
         </Link>
-        <Link href={"/contact"}>
+        <Link href={'/contact'}>
           <motion.li
             className={`
              p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
                isDark
-                 ? "text-white hover:bg-gray-700"
-                 : "text-black hover:bg-gray-200"
+                 ? 'text-white hover:bg-gray-700'
+                : 'text-black hover:bg-gray-400'
              }            `}
             variants={itemVariants}
           >

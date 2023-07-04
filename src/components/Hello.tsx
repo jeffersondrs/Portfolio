@@ -45,7 +45,7 @@ const Hello = () => {
         }}
         transition={{ ...spring, delay: 0.9 }}
         className={`
-        text-base sm:text-xs font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-center whitespace-pre-wrap break-words ${
+        text-base sm:text-sm font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words ${
           isDark ? "from-gray-100 to-gray-300" : "from-purple-600 to-pink-800"
         }
         `}
@@ -64,7 +64,7 @@ const Hello = () => {
             delay: 0.9,
           }}
           className={`
-        text-base sm:text-xs font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-center whitespace-pre-wrap break-words ${
+        text-base sm:text-sm font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words ${
           isDark ? "from-gray-100 to-gray-200" : "from-purple-600 to-pink-800"
         }
         `}

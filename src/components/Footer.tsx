@@ -13,7 +13,7 @@ export default function Footer() {
     <footer
       className={`
       ${isDark ? "bg-gray-900 text-white" : "bg-gray-200/60 text-black"}
-      flex justify-center items-center w-full p-10 sm:p-2 bg-gray-100 flex-col sm:text-xs
+      flex justify-center items-center w-full p-10 sm:p-5 bg-gray-100 flex-col sm:text-xs
     `}
     >
       <div className="flex flex-row gap-3">

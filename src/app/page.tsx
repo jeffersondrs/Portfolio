@@ -16,11 +16,11 @@ export default function Home() {
     <main
       className={`
     ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
-    flex flex-col items-center w-full sm:h-full sm:py-3 justify-center gap-10
+    flex flex-col items-center w-full h-full sm:h-full sm:py-3 justify-center px-5 py-10 sm:px-3 gap-5
     `}
     >
       <Hello />
-      <div className="flex flex-col justify-center items-center gap-20 sm:gap-5 py-5 px-10">
+      <div className="flex flex-col justify-center items-center gap-20 sm:gap-5 py-5">
         {projetos.map((projeto) => (
           <ProjectLayout
             key={projeto.id}
