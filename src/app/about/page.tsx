@@ -22,7 +22,7 @@ export default function AboutPage() {
     ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
     `}
     >
-      <div className="overflow-hidden flex flex-row justify-center items-center max-w-4xl sm:w-full">
+      <div className="overflow-hidden flex flex-row justify-center py-16 items-center max-w-4xl sm:w-full">
         {aboutMe.map((about) => (
           <motion.img
             ref={ref}
@@ -77,7 +77,7 @@ export default function AboutPage() {
           Olá novamente, sou o Jefferson
         </h1>
         <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold ${
+          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
@@ -91,7 +91,7 @@ export default function AboutPage() {
           de Almeida, e me formo em meados de 2024.
         </p>
         <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold ${
+          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <span className="text-red-500">❤️</span>
         </p>
         <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold ${
+          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
@@ -117,7 +117,7 @@ export default function AboutPage() {
           desenvolvedores.
         </p>
         <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold ${
+          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
@@ -129,7 +129,7 @@ export default function AboutPage() {
           meu. Um lugar para chamar de lar.
         </p>
         <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold ${
+          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >

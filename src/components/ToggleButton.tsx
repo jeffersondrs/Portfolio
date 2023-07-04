@@ -11,7 +11,7 @@ export default function ToggoeButton() {
 
   return (
     <div
-      className={`w-20 sm:w-14 flex justify-start rounded-full p-1 sm:p-0 cursor-pointer ${
+      className={`w-20 z-50 sm:w-14 flex justify-start rounded-full p-1 sm:p-0 cursor-pointer ${
         isOn ? "justify-end" : "justyfy-start"
       }
       ${isDark ? "bg-gray-600" : "bg-gray-200"}

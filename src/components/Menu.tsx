@@ -20,10 +20,10 @@ export default function App() {
   const { isDark } = useContext(ThemeContext);
 
   return (
-    <motion.nav
+    <motion.div
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
-      className="flex flex-col absolute top-0 -right-8 z-50 justify-center items-center"
+      className="flex flex-col translate-y-14 left-0 right-0 justify-center  items-center"
     >
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <motion.ul
@@ -75,7 +75,7 @@ export default function App() {
              p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
                isDark
                  ? 'text-white hover:bg-gray-700'
-                : 'text-black hover:bg-gray-400'
+                 : 'text-black hover:bg-gray-400'
              }            `}
             variants={itemVariants}
           >
@@ -89,7 +89,7 @@ export default function App() {
              p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
                isDark
                  ? 'text-white hover:bg-gray-700'
-                : 'text-black hover:bg-gray-400'
+                 : 'text-black hover:bg-gray-400'
              }            `}
             variants={itemVariants}
           >
@@ -98,6 +98,6 @@ export default function App() {
           </motion.li>
         </Link>
       </motion.ul>
-    </motion.nav>
+    </motion.div>
   );
 }

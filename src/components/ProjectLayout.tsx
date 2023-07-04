@@ -31,7 +31,7 @@ export default function ProjectLayout({
           ? 'bg-gray-900 text-white hover:shadow-sm hover:bg-gray-800'
           : 'bg-gray-200 text-black hover:shadow-sm hover:bg-slate-50'
       }
-    w-full overflow-hidden rounded-3xl shadow-lg  transition-all duration-500 ease-in-out text-gray-100 p-5 sm:p-2 flex flex-row sm:flex-col justify-center items-center hover:scale-105 transform hover:shadow-2xl gap-5 h-full
+    w-full overflow-hidden rounded-3xl shadow-lg  transition-all duration-500 ease-in-out text-gray-100 p-5 sm:p-2 flex flex-row sm:flex-col justify-center items-center hover:scale-105 transform hover:shadow-2xl gap-5 sm:gap-1 h-full
     `}
       key={productId}
     >
@@ -51,7 +51,7 @@ export default function ProjectLayout({
         <p className="text-xl sm:text-sm text-start max-w-xl">
           {productDescription || 'Descrição'}
         </p>
-        <div className="py-5 w-full flex flex-col justify-start items-start sm:items-center">
+        <div className="py-5 w-full sm:py-1 flex flex-col justify-start items-start sm:items-center">
           <Link
             href={`${productName}`}
             className="flex flex-row justify-between items-center bg-gray-400 hover:bg-gray-600 text-2xl text-white font-bold py-3 px-10 sm:px-5 sm:py-2 sm:text-lg transition-all gap-5 duration-500 ease-in-out rounded-2xl"

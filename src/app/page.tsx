@@ -19,7 +19,9 @@ export default function Home() {
     flex flex-col items-center w-full h-full sm:h-full sm:py-3 justify-center px-5 py-10 sm:px-3 gap-5
     `}
     >
-      <Hello />
+      <div className="flex flex-col justify-center items-center gap-20 sm:gap-5 py-5">
+        <Hello />
+      </div>
       <div className="flex flex-col justify-center items-center gap-20 sm:gap-5 py-5">
         {projetos.map((projeto) => (
           <ProjectLayout

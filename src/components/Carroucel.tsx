@@ -80,7 +80,6 @@ export const Carroucel = ({ images }: CaroucelProps) => {
             width={640}
             height={640}
             alt="Imagem do projeto"
-            
           />
         </motion.div>
       </AnimatePresence>

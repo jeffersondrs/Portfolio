@@ -14,7 +14,7 @@ const Hello = () => {
   };
 
   return (
-    <div className="p-10 sm:p-0 sm:mt-5 flex flex-col py-40 sm:py-10 items-center justify-center w-full h-full sm:flex-col gap-3 tracking-wide">
+    <div className="p-10 sm:p-0 sm:mt-5 flex flex-col py-40 sm:py-5 items-start px-40 justify-center sm:items-start w-full h-full sm:flex-col gap-3 tracking-wide">
       <motion.p
         initial={{ translateY: -30, opacity: 0 }}
         animate={{
@@ -22,7 +22,7 @@ const Hello = () => {
           opacity: 1,
         }}
         transition={spring}
-        className="text-6xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r tracking-wide from-purple-500 to-red-500"
+        className="text-6xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r tracking-wide from-purple-500 to-red-500"
       >
         Oi, eu sou o Jefferson.
       </motion.p>

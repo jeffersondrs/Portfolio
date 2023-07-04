@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import React from "react";
-import { motion } from "framer-motion";
-import { ThemeContext } from "@/context/ThemeProvider";
-import { useContext } from "react";
-import ToggoeButton from "./ToggleButton";
-import Menu from "./Menu";
-import Logo from "./Logo";
+import Link from 'next/link';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ThemeContext } from '@/context/ThemeProvider';
+import { useContext } from 'react';
+import ToggoeButton from './ToggleButton';
+import Menu from './Menu';
+import Logo from './Logo';
 interface NavegationProps {
   children?: React.ReactNode;
 }
@@ -24,9 +24,8 @@ export default function Navegation({ children }: NavegationProps) {
         }}
         transition={{ duration: 0.5 }}
         className={`
-      ${isDark ? "bg-gray-950 text-white" : "bg-gray-100 text-black"}
-      flex w-full justify-between sm:justify-start sm:items-start items-center px-4 py-2 pr-40
-      `}
+      ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
+      flex w-full justify-between sm:justify-between sm:items-center items-center px-4`}
       >
         <Link href="/">
           <Logo />
@@ -47,7 +46,7 @@ export default function Navegation({ children }: NavegationProps) {
           </Link>
         </div>
         <Menu />
-        <div className="flex flex-col justify-center items-center translate-x-4">
+        <div className="flex flex-col justify-center items-center ">
           <ToggoeButton />
           <span className="text-xs">Theme</span>
         </div>
