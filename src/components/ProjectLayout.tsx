@@ -31,7 +31,7 @@ export default function ProjectLayout({
           ? 'bg-gray-900 text-white hover:shadow-sm hover:bg-gray-800'
           : 'bg-gray-200 text-black hover:shadow-sm hover:bg-slate-50'
       }
-    w-full overflow-hidden rounded-3xl shadow-lg  transition-all duration-500 ease-in-out text-gray-100 p-5 flex flex-row sm:flex-col justify-center items-center hover:scale-105
+    w-full overflow-hidden rounded-3xl shadow-lg  transition-all duration-500 ease-in-out text-gray-100 p-5 flex flex-row sm:flex-col justify-center items-center hover:scale-105 transform hover:shadow-2xl gap-5 h-full
     `}
       key={productId}
     >
@@ -42,7 +42,7 @@ export default function ProjectLayout({
       `}
       >
         <h1 className="text-3xl sm:text-2xl font-bold">{productName}</h1>
-        <h2 className="text-sm sm:text-xs flex flex-row items-center gap-3">
+        <h2 className="text-sm sm:text-xs flex flex-row items-center gap-3 max-w-sm">
           {projectTechs?.map((tech) => (
             <span key={tech}>{tech}</span>
           ))}

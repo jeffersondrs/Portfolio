@@ -14,7 +14,7 @@ export const projetos = [
   {
     id: 1,
     title: 'Web Ecommerce',
-    techs: ['React', 'Typescript', 'TailWindCss', 'Styled-Component', 'Sass'],
+    techs: ['Nextjs', 'Typescript', 'TailWindCss'],
     description:
       'Lading Page Criada com React, Vite, Typescript Dependencias: React-router-dom, react-icons, TailWindCss, Styled-Component, Sass, dentre outras que irei adicionando conforme for necessário.',
     image: [
@@ -32,14 +32,9 @@ export const projetos = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     techs: [
       'TailwindCss',
-      'React',
       'Nextjs',
-      'Typescript',
-      'Styled-Component',
       'SASS',
       'GraphQL',
-      'Moment',
-      'Hygrath CRM',
     ],
 
     image: [
