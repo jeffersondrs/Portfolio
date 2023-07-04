@@ -1,18 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import React from "react";
-import Menu from "@/components/Menu";
 import { ThemeContext } from "@/context/ThemeProvider";
 import { useContext } from "react";
+import Home from "@/components/WidowsSize";
 
 export default function ContactPage() {
   const { isDark } = useContext(ThemeContext);
   return (
-    <div className={`
+    <section
+      className={`
     ${isDark ? "bg-gray-950 text-white" : "bg-gray-100 text-black"}
-    `}>
-      <h1>Contact Page</h1>
-    </div>
+    `}
+    >
+      <Home />
+    </section>
   );
 }

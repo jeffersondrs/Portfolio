@@ -2,37 +2,44 @@ import { motion } from "framer-motion";
 
 const YourComponent = () => {
   return (
-    <motion.div
-      className="hover:translate-x-3 hover:translate-y-3 transition-all duration-300 ease-in-out transform cursor-pointer"
-      whileHover={{ translateX: 3, translateY: 3 }}
-    >
-      <motion.p
-        className="text-2xl"
-        whileHover={{ translateX: 4, translateY: 3 }}
-      >
+    <div>
+      <div className="flex flex-row gap-2 items-center">
         <motion.span
-          className="text-4xl bg-yellow-400 px-2 border border-black"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ translateX: -30, opacity: 1 }}
+          animate={{ translateX: 12 }}
+          transition={{ duration: 1, repeat: 2, repeatType: "reverse" }}
+          className="text-4xl sm:text-xl bg-yellow-400 px-2 sm:px-1"
         >
           J
         </motion.span>
-        <span>efferson</span>
-      </motion.p>
-      <motion.p
-        className="text-2xl translate-x-4 translate-y-3"
-        whileHover={{ translateX: 4, translateY: 3 }}
-      >
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+          className="text-2xl sm:text-sm px-1"
+        >
+          efferson
+        </motion.p>
+      </div>
+      <div className="flex flex-row gap-2 items-center">
         <motion.span
-          className="bg-yellow-400 px-2 text-4xl border border-black"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ translateY: -30, opacity: 1 }}
+          animate={{ translateY: 0, translateX: 22 }}
+          transition={{ duration: 1, repeat: 2, repeatType: "reverse" }}
+          className="text-4xl sm:text-xl bg-yellow-400 px-2 sm:px-1"
         >
           S
         </motion.span>
-        <span>Santos</span>
-      </motion.p>
-    </motion.div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, translateX: 10 }}
+          transition={{ duration: 1, delay: 2 }}
+          className="text-2xl sm:text-sm px-1"
+        >
+          antos
+        </motion.p>
+      </div>
+    </div>
   );
 };
 

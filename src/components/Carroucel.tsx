@@ -1,11 +1,10 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { useState, useContext } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { wrap } from "popmotion";
-import { images } from "@/api/data";
-import { ThemeContext } from "@/context/ThemeProvider";
+import * as React from 'react';
+import { useState, useContext } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { wrap } from 'popmotion';
+import { ThemeContext } from '@/context/ThemeProvider';
 
 const variants = {
   enter: (direction: number) => {
@@ -33,7 +32,11 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-export const Carroucel = () => {
+interface CaroucelProps {
+  images: string[];
+}
+
+export const Carroucel = ({ images }: CaroucelProps) => {
   const { isDark } = useContext(ThemeContext);
   const [[page, direction], setPage] = useState([0, 0]);
 
@@ -44,7 +47,7 @@ export const Carroucel = () => {
   };
 
   return (
-    <div className=" w-full h-screen relative flex justify-center items-center">
+    <div className=" w-full min-w-fit h-96 relative flex justify-center items-center rounded-xl overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={page}
@@ -55,7 +58,7 @@ export const Carroucel = () => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { type: 'spring', stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
           }}
           drag="x"
@@ -75,21 +78,21 @@ export const Carroucel = () => {
       </AnimatePresence>
       <div
         className={`
-        ${isDark ? "bg-black text-white" : "bg-white text-black"}
+        ${isDark ? 'bg-black text-white' : 'bg-white text-black'}
         absolute rounded-3xl w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-10 right-2
         `}
         onClick={() => paginate(1)}
       >
-        {"‣"}
+        {'‣'}
       </div>
       <div
         className={`
-        ${isDark ? "bg-black text-white" : "bg-white text-black"}
+        ${isDark ? 'bg-black text-white' : 'bg-white text-black'}
         absolute rounded-3xl w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-10 left-2 -scale-100
         `}
         onClick={() => paginate(-1)}
       >
-        {"‣"}
+        {'‣'}
       </div>
     </div>
   );

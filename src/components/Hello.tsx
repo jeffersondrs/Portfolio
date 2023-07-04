@@ -14,7 +14,7 @@ const Hello = () => {
   };
 
   return (
-    <div className="p-10 sm:p-0 sm:mt-5 flex flex-col items-center justify-center w-full h-full sm:flex-col gap-3 tracking-wide">
+    <div className="p-10 sm:p-0 sm:mt-5 flex flex-col py-40 sm:py-10 items-center justify-center w-full h-full sm:flex-col gap-3 tracking-wide">
       <motion.p
         initial={{ translateY: -30, opacity: 0 }}
         animate={{
@@ -22,9 +22,9 @@ const Hello = () => {
           opacity: 1,
         }}
         transition={spring}
-        className="text-5xl sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r  from-purple-400 to-red-400"
+        className="text-6xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r tracking-wide from-purple-500 to-red-500"
       >
-        Oi, eu sou o Jefferson
+        Oi, eu sou o Jefferson.
       </motion.p>
       <motion.p
         initial={{ translateY: -15, opacity: 0 }}
@@ -33,7 +33,7 @@ const Hello = () => {
           opacity: 1,
         }}
         transition={{ ...spring, delay: 0.5 }}
-        className="text-xl sm:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+        className="text-xl sm:text-lg font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r from-purple-600 to-pink-800"
       >
         Rio de Janeiro, Brasil
       </motion.p>
@@ -45,8 +45,8 @@ const Hello = () => {
         }}
         transition={{ ...spring, delay: 0.9 }}
         className={`
-        text-base sm:text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-center whitespace-pre-wrap break-words ${
-          isDark ? "from-gray-100 to-gray-300" : "from-purple-600 to-pink-400"
+        text-base sm:text-xs font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-center whitespace-pre-wrap break-words ${
+          isDark ? "from-gray-100 to-gray-300" : "from-purple-600 to-pink-800"
         }
         `}
       >
@@ -64,8 +64,8 @@ const Hello = () => {
             delay: 0.9,
           }}
           className={`
-        text-base sm:text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-center whitespace-pre-wrap break-words ${
-          isDark ? "from-gray-100 to-gray-200" : "from-purple-600 to-pink-400"
+        text-base sm:text-xs font-extrabold text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-center whitespace-pre-wrap break-words ${
+          isDark ? "from-gray-100 to-gray-200" : "from-purple-600 to-pink-800"
         }
         `}
         >

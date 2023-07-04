@@ -2,6 +2,9 @@ import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import Link from "next/link";
+import { ThemeContext } from "@/context/ThemeProvider";
+import { useContext } from "react";
+import { HomeIcon, MessageSquare, User2 } from "lucide-react";
 
 const itemVariants: Variants = {
   open: {
@@ -14,17 +17,18 @@ const itemVariants: Variants = {
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isDark } = useContext(ThemeContext);
 
   return (
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="flex flex-col w-48 sm:items-end sm:w-full"
+      className="flex flex-col absolute top-0 right-0 z-50 justify-center items-center"
     >
-      <motion.button
+      {/* <motion.button
         whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex flex-row justify-between items-center w-full p-3 bg-gray-100 rounded-md shadow-md focus:outline-none sm:hidden"
+        className="flex flex-row justify-between items-center  p-3 bg-gray-100 rounded-md shadow-md focus:outline-none sm:hidden"
       >
         Menu
         <motion.div
@@ -39,7 +43,7 @@ export default function App() {
             <path d="M0 7 L 20 7 L 10 16" />
           </svg>
         </motion.div>
-      </motion.button>
+      </motion.button> */}
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <motion.ul
         variants={{
@@ -63,29 +67,52 @@ export default function App() {
           },
         }}
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
-        className="flex flex-col gap-2 p-1 bg-gray-100 rounded-md shadow-md sm:w-48"
+        className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-32 ${
+          isOpen ? "bg-gray-100" : "bg-gray-200"
+        }
+          ${isDark ? "bg-gray-900" : "bg-gray-100"}
+        `}
       >
         <Link href={"/"}>
           <motion.li
-            className="hover:bg-gray-300 p-1 rounded-md hover:cursor-pointer"
+            className={`
+            p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+              isDark
+                ? "text-white hover:bg-gray-700"
+                : "text-black hover:bg-gray-200"
+            }
+             `}
             variants={itemVariants}
           >
+            <HomeIcon className="w-3 h-3" />
             Home
           </motion.li>
         </Link>
         <Link href={"/about"}>
           <motion.li
-            className="hover:bg-gray-300 p-1 rounded-md hover:cursor-pointer"
+            className={`
+             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+               isDark
+                 ? "text-white hover:bg-gray-700"
+                 : "text-black hover:bg-gray-200"
+             }            `}
             variants={itemVariants}
           >
+            <User2 className="w-3 h-3" />
             Sobre
           </motion.li>
         </Link>
         <Link href={"/contact"}>
           <motion.li
-            className="hover:bg-gray-300 p-1 rounded-md hover:cursor-pointer"
+            className={`
+             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+               isDark
+                 ? "text-white hover:bg-gray-700"
+                 : "text-black hover:bg-gray-200"
+             }            `}
             variants={itemVariants}
           >
+            <MessageSquare className="w-3 h-3" />
             Contato
           </motion.li>
         </Link>

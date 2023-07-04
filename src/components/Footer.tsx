@@ -13,31 +13,31 @@ export default function Footer() {
     <footer
       className={`
       ${isDark ? "bg-gray-900 text-white" : "bg-gray-200/60 text-black"}
-      flex justify-center items-center w-full p-10 bg-gray-100 flex-col
+      flex justify-center items-center w-full p-10 sm:p-2 bg-gray-100 flex-col sm:text-xs
     `}
     >
       <div className="flex flex-row gap-3">
         <Link href="https://twitter.com/kalliadranoth">
           <Twitter
             size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400 sm:w-6 sm:h-6"
           />
         </Link>
         <Link href="https://github.com/jeffersondrs">
           <Github
             size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 sm:w-6 sm:h-6"
           />
         </Link>
 
         <Link href="https://www.linkedin.com/in/jeffersondrs/">
           <Linkedin
             size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700 sm:w-6 sm:h-6"
           />
         </Link>
       </div>
-      <div className="flex flex-row gap-3 mt-5">
+      <div className="flex flex-row gap-3 mt-5 sm:mt-1">
         <p className="tracking-wider">
           Made with <span className="text-red-500">❤️</span> by{" "}
           <Link
@@ -50,7 +50,7 @@ export default function Footer() {
         </p>
       </div>
       <div>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm sm:text-xs text-gray-500">
           © Copyrigth {new Date().getFullYear()} - All rights reserved
         </p>
       </div>
