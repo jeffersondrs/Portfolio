@@ -22,7 +22,7 @@ export default function AboutPage() {
     ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
     `}
     >
-      <div className="overflow-hidden flex flex-row justify-center py-16 items-center max-w-4xl sm:w-full">
+      <div className="overflow-hidden flex flex-row justify-center pt-16 items-center max-w-4xl sm:w-full">
         {aboutMe.map((about) => (
           <motion.img
             ref={ref}
