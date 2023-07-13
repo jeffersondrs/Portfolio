@@ -1,11 +1,8 @@
 'use client';
 
-// import Image from "next/image";
-// import { motion } from "framer-motion";
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
 import Hello from '@/components/Hello';
-// import MotionOne from "@/components/Scrolling";
 import ProjectLayout from '@/components/ProjectLayout';
 import { projetos } from '@/api/data';
 
