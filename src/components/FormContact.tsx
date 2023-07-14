@@ -6,10 +6,18 @@ import { motion } from 'framer-motion';
 import { ToastContainer } from 'react-toastify';
 import ThankYouSubmit from './ThankyouSubmit';
 
+interface FormContactProps {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export default function FormContact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formmulary, setFormmulary] = useState<FormContactProps>({
+    name: '',
+    email: '',
+    message: '',
+  });
   const [isSubmit, setIsSubmit] = useState(false);
   const { isDark } = useContext(ThemeContext);
   const {
@@ -18,17 +26,31 @@ export default function FormContact() {
     formState: { errors },
   } = useForm();
 
+  const sendMessage = async () => {
+    const response = await fetch('https://jeffersondrs.tech/api/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formmulary.name,
+        email: formmulary.email,
+        message: formmulary.message,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+  };
+
   const onSubmit = (data: any) => {
-    setName(data.name);
-    setEmail(data.email);
-    setMessage(data.message);
     setIsSubmit(true);
+    sendMessage();
   };
 
   if (isSubmit) {
-    return <ThankYouSubmit name={name} />;
+    return <ThankYouSubmit name={formmulary.name} />;
   }
-
+console.log(formmulary)
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -45,7 +67,7 @@ export default function FormContact() {
             focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('name', { required: true })}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setFormmulary({ ...formmulary, name: e.target.value })}
         />
         {errors.name && (
           <motion.span
@@ -67,7 +89,7 @@ export default function FormContact() {
 
            ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('email', { required: true })}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setFormmulary({ ...formmulary, email: e.target.value })}
         />
         {errors.email && (
           <motion.span
@@ -88,6 +110,7 @@ export default function FormContact() {
 
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('message', { required: true })}
+          onChange={(e) => setFormmulary({ ...formmulary, message: e.target.value })}
         />
         {errors.message && (
           <motion.span
