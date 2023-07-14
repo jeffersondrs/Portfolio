@@ -47,7 +47,19 @@ export default function FormContact() {
   };
 
   if (isSubmit) {
-    return <ThankYouSubmit name={formmulary.name} />;
+    return (
+      <div className="flex flex-col justify-center items-center gap-3">
+        <ThankYouSubmit name={formmulary.name} />
+        <button
+          onClick={() => {
+            window.location.reload();
+          }}
+          className="flex flex-row items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg"
+        >
+          Enviar Novamente!
+        </button>
+      </div>
+    );
   }
 
   return (
