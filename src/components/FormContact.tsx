@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { ToastContainer } from 'react-toastify';
 import ThankYouSubmit from './ThankyouSubmit';
 
 interface FormContactProps {
@@ -50,7 +49,7 @@ export default function FormContact() {
   if (isSubmit) {
     return <ThankYouSubmit name={formmulary.name} />;
   }
-console.log(formmulary)
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -67,7 +66,9 @@ console.log(formmulary)
             focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('name', { required: true })}
-          onChange={(e) => setFormmulary({ ...formmulary, name: e.target.value })}
+          onChange={(e) =>
+            setFormmulary({ ...formmulary, name: e.target.value })
+          }
         />
         {errors.name && (
           <motion.span
@@ -89,7 +90,9 @@ console.log(formmulary)
 
            ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('email', { required: true })}
-          onChange={(e) => setFormmulary({ ...formmulary, email: e.target.value })}
+          onChange={(e) =>
+            setFormmulary({ ...formmulary, email: e.target.value })
+          }
         />
         {errors.email && (
           <motion.span
@@ -110,7 +113,9 @@ console.log(formmulary)
 
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('message', { required: true })}
-          onChange={(e) => setFormmulary({ ...formmulary, message: e.target.value })}
+          onChange={(e) =>
+            setFormmulary({ ...formmulary, message: e.target.value })
+          }
         />
         {errors.message && (
           <motion.span
