@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import React from "react";
-import { ThemeContext } from "@/context/ThemeProvider";
-import { useContext } from "react";
-import Home from "@/components/WidowsSize";
+import React from 'react';
+import { ThemeContext } from '@/context/ThemeProvider';
+import { useContext } from 'react';
+import FormContact from '@/components/FormContact';
 
 export default function ContactPage() {
   const { isDark } = useContext(ThemeContext);
   return (
     <section
-      className={`
-    ${isDark ? "bg-gray-950 text-white" : "bg-gray-100 text-black"}
+      className={`flex flex-row items-center w-full h-full sm:h-full sm:py-16 justify-center px-5 sm:p-1 py-20 gap-5
+    ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
     `}
     >
-      <Home />
+      <FormContact />
     </section>
   );
 }
