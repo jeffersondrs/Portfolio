@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useFollowPointer } from '@/hooks/useFollowPointer';
 import { Dog, Gamepad2, Home, MapPin, Swords } from 'lucide-react';
+import Curriculo from '@/components/Curriculo';
 
 export default function AboutPage() {
   const { isDark } = useContext(ThemeContext);
@@ -95,7 +96,10 @@ export default function AboutPage() {
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
-          <Dog size={24} className="text-red-700 absolute -translate-x-10 sm:-translate-x-6" />
+          <Dog
+            size={24}
+            className="text-red-700 absolute -translate-x-10 sm:-translate-x-6"
+          />
           Meu amigo da foto direita se foi em janeiro de 2023, mas ele sempre
           estará em meu coração. Ele foi um grande amigo e companheiro. Sinto
           saudades dele todos os dias. Éramos inseparáveis, Ozzy e eu. Minha
@@ -107,7 +111,10 @@ export default function AboutPage() {
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
-          <Swords size={24} className="text-sky-700 absolute -translate-x-10 sm:-translate-x-6" />
+          <Swords
+            size={24}
+            className="text-sky-700 absolute -translate-x-10 sm:-translate-x-6"
+          />
           Estou sempre em busca de novos desafios e oportunidades de
           aprendizado. Sou apaixonado por tecnologia e por tudo que ela pode nos
           proporcionar. Meu objetivo é me tornar um desenvolvedor full-stack
@@ -121,7 +128,10 @@ export default function AboutPage() {
             isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
           }`}
         >
-          <Home size={24} className="text-green-700 absolute -translate-x-10 sm:-translate-x-6" />
+          <Home
+            size={24}
+            className="text-green-700 absolute -translate-x-10 sm:-translate-x-6"
+          />
           Uma toca de hobbit na foto a esquerda é um lugar para se viver. É um
           lugar para se comer, dormir, ler, escrever, pensar, sonhar, criar,
           imaginar, descansar, relaxar, se divertir, se alegrar. Tenho o sonho
@@ -153,6 +163,7 @@ export default function AboutPage() {
           </Link>
         </div>
       </div>
+      <Curriculo />
     </section>
   );
 }
