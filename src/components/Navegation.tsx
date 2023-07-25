@@ -44,6 +44,9 @@ export default function Navegation({ children }: NavegationProps) {
           <Link href="/contact" className="hover:text-gray-400">
             Contact
           </Link>
+          <Link href="https://jeffersondrsblog.vercel.app/" className="hover:text-gray-400">
+            Blog
+          </Link>
         </div>
         <Menu />
         <div className="flex flex-col justify-center items-center ">
