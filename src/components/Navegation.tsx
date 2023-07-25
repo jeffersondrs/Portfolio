@@ -44,7 +44,12 @@ export default function Navegation({ children }: NavegationProps) {
           <Link href="/contact" className="hover:text-gray-400">
             Contact
           </Link>
-          <Link href="https://jeffersondrsblog.vercel.app/" className="hover:text-gray-400">
+          <Link
+            href="https://jeffersondrsblog.vercel.app/"
+            className="hover:text-gray-400"
+            target='_blank'
+            referrerPolicy='no-referrer'
+          >
             Blog
           </Link>
         </div>
