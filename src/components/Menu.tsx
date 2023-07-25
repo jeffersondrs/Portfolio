@@ -4,7 +4,7 @@ import { MenuToggle } from './MenuToggle';
 import Link from 'next/link';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
-import { HomeIcon, MessageSquare, User2 } from 'lucide-react';
+import { HomeIcon, MessageSquare, User2, FileCode2 } from 'lucide-react';
 
 const itemVariants: Variants = {
   open: {
@@ -95,6 +95,24 @@ export default function App() {
           >
             <MessageSquare className="w-3 h-3" />
             Contato
+          </motion.li>
+        </Link>
+        <Link
+            href="https://jeffersondrsblog.vercel.app/"
+            className="hover:text-gray-400"
+            target='_blank'
+            referrerPolicy='no-referrer'
+          >          <motion.li
+            className={`
+             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+               isDark
+                 ? 'text-white hover:bg-gray-700'
+                 : 'text-black hover:bg-gray-400'
+             }            `}
+            variants={itemVariants}
+          >
+            <FileCode2 className="w-3 h-3" />
+            Blog
           </motion.li>
         </Link>
       </motion.ul>
