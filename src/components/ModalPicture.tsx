@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { projetos } from '@/api/data';
 
@@ -45,7 +44,7 @@ export default function ProjectPage({ onClick }: ModalProps) {
           />
         ))}
       </div>
-      
+
       {modalOpen && (
         <div className="modal">
           <div className="modal-content">

@@ -30,12 +30,7 @@ export const projetos = [
 
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-    techs: [
-      'TailwindCss',
-      'Nextjs',
-      'SASS',
-      'GraphQL',
-    ],
+    techs: ['TailwindCss', 'Nextjs', 'SASS', 'GraphQL'],
 
     image: [
       'https://raw.githubusercontent.com/jeffersondrs/MyBlog/main/public/home.png',
@@ -53,6 +48,23 @@ export const projetos = [
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/barbershopproject.png',
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/contactbarberproject.png',
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/blogbarberproject.png',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Note Check',
+
+    description:
+      'Projeto desenvolvido com React Native/Expo para gerenciar notas, com opção de adicionar, editar, excluir e marcar como concluída, além de listas de tarefas. Estou contantemente atualizando o projeto, adicionando novas funcionalidades e melhorando o código.',
+    techs: ['React Native', 'Expo', 'Typescript', 'Styled-Components'],
+    image: [
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.18%20PM%20(3).jpeg1692992624922?alt=media&token=66ab4ed4-1a3f-402f-a368-8914b717e046',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.18%20PM%20(2).jpeg1692992651699?alt=media&token=01c9f7ec-e882-4e67-9a9f-e1a7c9ee7efb',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.18%20PM%20(1).jpeg1692992677836?alt=media&token=5811a590-ec73-493b-9781-a0093cedd472',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.18%20PM.jpeg1692992746542?alt=media&token=2c793371-5db3-4aaa-83a9-35a679285602',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM%20(2).jpeg1692992763534?alt=media&token=0ef9da5a-99d0-4b1f-a749-9d66688359eb',
+      "https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM%20(1).jpeg1692992888005?alt=media&token=1a16bf9a-259c-430c-809e-c67d4e3a330c"
+      ,"https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM.jpeg1692992908855?alt=media&token=4ec94907-41fc-4ae1-a5f4-633273e10ea1"
     ],
   },
 ];

@@ -15,7 +15,7 @@ const itemVariants: Variants = {
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
 
-export default function App() {
+export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   const { isDark } = useContext(ThemeContext);
 

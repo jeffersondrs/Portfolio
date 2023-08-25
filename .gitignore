@@ -7,10 +7,12 @@
 
 # testing
 /coverage
-
+specs/
 # next.js
 /.next/
 /out/
+
+*.spec.tsx
 
 # production
 /build
