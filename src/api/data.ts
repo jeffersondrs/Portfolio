@@ -23,6 +23,8 @@ export const projetos = [
       'https://raw.githubusercontent.com/jeffersondrs/web-ecommerce/main/public/about.png',
       'https://raw.githubusercontent.com/jeffersondrs/web-ecommerce/main/public/support.png',
     ],
+    link: 'https://github.com/jeffersondrs/web-ecommerce',
+    live: 'https://web-ecommerce-eta.vercel.app/',
   },
   {
     id: 2,
@@ -36,6 +38,8 @@ export const projetos = [
       'https://raw.githubusercontent.com/jeffersondrs/MyBlog/main/public/home.png',
       'https://raw.githubusercontent.com/jeffersondrs/MyBlog/main/public//post.png',
     ],
+    link: 'https://github.com/jeffersondrs/MyBlog',
+    live: 'http://my-blog-steel-alpha.vercel.app/',
   },
   {
     id: 3,
@@ -49,6 +53,8 @@ export const projetos = [
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/contactbarberproject.png',
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/blogbarberproject.png',
     ],
+    link: 'https://github.com/jeffersondrs/barberariablogshop',
+    live: 'https://barberariablogshop.vercel.app/',
   },
   {
     id: 4,
@@ -63,8 +69,33 @@ export const projetos = [
       'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.18%20PM%20(1).jpeg1692992677836?alt=media&token=5811a590-ec73-493b-9781-a0093cedd472',
       'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.18%20PM.jpeg1692992746542?alt=media&token=2c793371-5db3-4aaa-83a9-35a679285602',
       'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM%20(2).jpeg1692992763534?alt=media&token=0ef9da5a-99d0-4b1f-a749-9d66688359eb',
-      "https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM%20(1).jpeg1692992888005?alt=media&token=1a16bf9a-259c-430c-809e-c67d4e3a330c"
-      ,"https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM.jpeg1692992908855?alt=media&token=4ec94907-41fc-4ae1-a5f4-633273e10ea1"
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM%20(1).jpeg1692992888005?alt=media&token=1a16bf9a-259c-430c-809e-c67d4e3a330c',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2FWhatsApp%20Image%202023-08-18%20at%2011.08.17%20PM.jpeg1692992908855?alt=media&token=4ec94907-41fc-4ae1-a5f4-633273e10ea1',
     ],
+    link: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
+    live: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
+  },
+  {
+    id: 5,
+    title: 'Agency Tech',
+
+    description:
+      'Projeto desenvolvido com Nextjs, Typescript, TailwindCss, React Hook Form, MongoDB, Nodejs, dentre outras tecnologias. O projeto é um site de uma agência de tecnologia, com opção de cadastro de clientes, serviços, produtos, blog, contato, etc. Atualmente é uma empresa fictícia, mas estou trabalhando para torná-la real.',
+    techs: [
+      'Nextjs',
+      'Nodejs',
+      'Typescript',
+      'TailwindCss',
+      'MongoDb',
+      'React Hook Form',
+    ],
+    image: [
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2Fscreencapture-agency-tech-vercel-app-2023-08-25-17_03_59.png1692993911785?alt=media&token=480b102d-5f40-49e9-b38c-6268f1d7d6d8',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2Fscreencapture-agency-tech-vercel-app-servicos-2023-08-25-17_04_14.png1692993927230?alt=media&token=f3346d7b-9442-4566-993b-f11857631a45',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2Fscreencapture-agency-tech-vercel-app-servicos-ecommerce-2023-08-25-17_04_52.png1692993949136?alt=media&token=a48534ba-6fbf-472b-b48b-d170ab1d324b',
+      'https://firebasestorage.googleapis.com/v0/b/jobmedia-d9435.appspot.com/o/images%2Fscreencapture-agency-tech-vercel-app-servicos-2023-08-25-17_04_14.png1692993927230?alt=media&token=f3346d7b-9442-4566-993b-f11857631a45',
+    ],
+    link: 'https://agency-tech.vercel.app/',
+    live: 'https://agency-tech.vercel.app/',
   },
 ];

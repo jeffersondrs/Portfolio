@@ -158,9 +158,9 @@ export default function AboutPage() {
             Entre em contato comigo
           </Link>
 
-          <Link className="text-blue-500 hover:text-blue-700" href="/projects">
+          {/* <Link className="text-blue-500 hover:text-blue-700" href="/projects">
             Veja meus projetos
-          </Link>
+          </Link> */}
         </div>
       </div>
       <Curriculo />
