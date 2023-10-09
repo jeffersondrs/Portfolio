@@ -3,9 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Twitter, Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   const { isDark } = useContext(ThemeContext);
@@ -18,9 +19,9 @@ export default function Footer() {
     >
       <div className="flex flex-row gap-3">
         <Link href="https://twitter.com/kalliadranoth">
-          <Twitter
+          <FaXTwitter
             size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400 sm:w-6 sm:h-6"
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 sm:w-6 sm:h-6"
           />
         </Link>
         <Link href="https://github.com/jeffersondrs">

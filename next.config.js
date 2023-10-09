@@ -5,6 +5,7 @@ const nextConfig = {
       'localhost',
       'raw.githubusercontent.com',
       'firebasestorage.googleapis.com',
+      'play-lh.googleusercontent.com',
     ],
   },
 };

@@ -5,7 +5,6 @@ import { useContext } from 'react';
 import Hello from '@/components/Hello';
 import ProjectLayout from '@/components/ProjectLayout';
 import { projetos } from '@/api/data';
-import Curriculo from '@/components/Curriculo';
 
 export default function Home() {
   const { isDark } = useContext(ThemeContext);

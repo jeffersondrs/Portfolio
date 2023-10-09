@@ -47,7 +47,7 @@ export default function ProjectPage() {
           Live
         </Link>
       </div>
-      <div className="flex flex-row flex-wrap gap-5">
+      <div className="flex flex-row flex-wrap gap-5 items-start justify-center">
         {project.image.map((image) => (
           <img
             src={image}
