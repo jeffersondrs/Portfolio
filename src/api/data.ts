@@ -39,7 +39,7 @@ export const projetos = [
       'https://raw.githubusercontent.com/jeffersondrs/MyBlog/main/public//post.png',
     ],
     link: 'https://github.com/jeffersondrs/MyBlog',
-    live: 'http://my-blog-steel-alpha.vercel.app/',
+    live: 'https://jeffersondrsblog.vercel.app/',
   },
   {
     id: 3,
