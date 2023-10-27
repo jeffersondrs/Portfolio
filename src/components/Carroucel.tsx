@@ -5,7 +5,6 @@ import { useState, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 import { ThemeContext } from '@/context/ThemeProvider';
-import Image from 'next/image';
 
 const variants = {
   enter: (direction: number) => {
@@ -48,7 +47,7 @@ export const Carroucel = ({ images }: CaroucelProps) => {
   };
 
   return (
-    <div className="w-full min-w-fit h-80 relative flex justify-center items-center overflow-hidden">
+    <div className="w-full min-w-fit h-80 relative flex justify-center items-center ">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}
@@ -73,12 +72,11 @@ export const Carroucel = ({ images }: CaroucelProps) => {
               paginate(-1);
             }
           }}
-          className="absolute w-full h-full object-cover"
+          className="absolute"
         >
-          <Image
+          <img
             src={images[imageIndex]}
-            width={640}
-            height={640}
+            className="w-full h-full object-cover "
             alt="Imagem do projeto"
           />
         </motion.div>

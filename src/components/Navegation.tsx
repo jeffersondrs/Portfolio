@@ -31,7 +31,7 @@ export default function Navegation({ children }: NavegationProps) {
           <Logo />
         </Link>
         <div
-          className="flex items-center space-x-4 sm:hidden transition-all 
+          className="flex items-center space-x-4 sm:hidden transition-all
         duration-500 ease-in-out transform cursor-pointer
           "
         >
