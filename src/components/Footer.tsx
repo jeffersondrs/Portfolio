@@ -38,7 +38,7 @@ export default function Footer() {
           />
         </Link>
       </div>
-      <div className="flex flex-row gap-3 mt-5 sm:mt-1">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-3 mt-5 sm:mt-1">
         <p className="tracking-wider">
           Made with <span className="text-red-500">❤️</span> by{' '}
           <Link

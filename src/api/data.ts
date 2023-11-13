@@ -28,10 +28,10 @@ export const projetos = [
   },
   {
     id: 2,
-    title: 'BLog Pessoal',
+    title: 'Blog Pessoal',
 
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+      'Blog pessoal criado para compartilhar conhecimento e experiências, além de ser um projeto para estudo e prática de tecnologias como Nextjs, TailwindCss, SASS, GraphQL, dentre outras. O projeto está em constante atualização, com novas funcionalidades e melhorias no código.',
     techs: ['TailwindCss', 'Nextjs', 'SASS', 'GraphQL'],
 
     image: [

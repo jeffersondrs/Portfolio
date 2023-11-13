@@ -4,7 +4,7 @@ export default function Home() {
   async function downloadCurriculoEnglish() {
     try {
       const response = await fetch(
-        'https://jeffersondrs.tech/curriculoenglish',
+        'https://portfolio-backend-2pwo.onrender.com/curriculoenglish',
         {
           method: 'GET',
           headers: {
@@ -37,7 +37,7 @@ export default function Home() {
 
   async function downloadCurriculoPortugues() {
     try {
-      const response = await fetch('https://jeffersondrs.tech/curriculoptbr', {
+      const response = await fetch('https://portfolio-backend-2pwo.onrender.com/curriculoptbr', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
