@@ -25,7 +25,7 @@ export default function Navegation({ children }: NavegationProps) {
         transition={{ duration: 0.5 }}
         className={`
       ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
-      flex w-full justify-between sm:justify-between sm:items-center items-center px-4`}
+      flex w-full justify-between sm:justify-between sm:items-center items-center px-4 drop-shadow-md	`}
       >
         <Link href="/">
           <Logo />

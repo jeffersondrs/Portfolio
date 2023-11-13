@@ -67,15 +67,17 @@ export default function FormContact() {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col items-center justify-center sm:w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r rounded-2xl shadow-xl from-purple-400 to-pink-600"
     >
-      <h1 className="text-2xl sm:text-2xl font-bold text-center text-white">
+      <h1 className="text-xl sm:text-2xl font-bold text-center text-white">
         Entre em contato comigo!
       </h1>
-      <div className="flex flex-col justify-center items-end">
+      <div className='flex flex-row w-full gap-3'>
+      <div className="flex flex-col justify-center items-end w-full">
         <input
           type="text"
           placeholder="Nome"
-          className={`w-96 sm:w-full h-12 px-5 rounded-lg 
-            focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
+          className={`w-80 sm:w-full  py-2 px-3 rounded-lg
+            focus:outline-none
+            text-xs md:text-base focus:ring-2 focus:ring-purple-600 focus:border-transparent
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('name', { required: true })}
           onChange={(e) =>
@@ -87,19 +89,19 @@ export default function FormContact() {
             initial={{ opacity: 0, y: -5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-red-500 absolute text-xs pr-2"
+            className="text-red-500 absolute text-[10px] md:text-xs pr-2"
           >
             Nome é obrigatório
           </motion.span>
         )}
       </div>
-      <div className="flex flex-col justify-center items-end">
+      <div className="flex flex-col justify-center items-end w-full">
         <input
           type="email"
           placeholder="E-mail"
-          className={`w-96 sm:w-full h-12 px-5 rounded-lg
+          className={`w-96 sm:w-full py-2 px-3 rounded-lg
           focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
-
+            text-xs md:text-base
            ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('email', { required: true })}
           onChange={(e) =>
@@ -111,18 +113,19 @@ export default function FormContact() {
             initial={{ opacity: 0, y: -5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-red-500 absolute text-xs pr-2"
+            className="text-red-500 absolute text-[10px] md:text-xs pr-2"
           >
             E-mail é obrigatório
           </motion.span>
         )}
       </div>
-      <div className="flex flex-col justify-center items-end">
+      </div>
+      <div className="flex flex-col  w-full">
         <textarea
           placeholder="Mensagem"
-          className={`w-96 sm:w-full h-40 p-5 rounded-lg 
+          className={`w-full h-40 p-3 rounded-lg
           focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
-
+          text-xs md:text-base
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('message', { required: true })}
           onChange={(e) =>
@@ -144,7 +147,7 @@ export default function FormContact() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-48 h-12 px-5 rounded-lg bg-gradient-to-r from-blue-400 to-sky-400 
+        className="w-48 h-12 px-5 rounded-lg bg-gradient-to-r from-blue-400 to-sky-400
             hover:from-blue-500 hover:to-sky-500 transition-all duration-300 ease-in-out text-white
             shadow-lg hover:shadow-xl font-bold text-lg sm:text-base
           "

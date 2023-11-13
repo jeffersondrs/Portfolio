@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col justify-center items-center md:flex-row gap-3 mt-5 sm:mt-1">
         <p className="tracking-wider">
-          Made with <span className="text-red-500">❤️</span> by{' '}
+          Feito com <span className="text-red-500">❤️</span> por {' '}
           <Link
             className="text-blue-500 hover:text-blue-700 transition-all duration-200 ease-in-out"
             href="
@@ -61,9 +61,9 @@ export default function Footer() {
           />
         </Link>
       </div>
-      <div>
+      <div className='py-2'>
         <p className="text-sm sm:text-xs text-gray-500">
-          © Copyrigth {new Date().getFullYear()} - All rights reserved
+          © Copyrigth {new Date().getFullYear()} - Todos os direitos reservados
         </p>
       </div>
     </footer>

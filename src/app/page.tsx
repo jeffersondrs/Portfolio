@@ -19,7 +19,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center gap-20 sm:gap-5 py-5">
         <Hello />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 py-10">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 py-10">
         {projetos.map((projeto) => (
           <ProjectLayout
             key={projeto.id}

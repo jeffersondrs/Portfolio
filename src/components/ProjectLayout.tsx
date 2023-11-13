@@ -41,7 +41,7 @@ export default function ProjectLayout({
         ${isDark ? 'text-white' : 'text-black'}
       `}
       >
-        <h1 className="text-lg font-bold lg:text-xl">{productName}</h1>
+        <h1 className="text-lg font-bold lg:text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">{productName}</h1>
         <h2 className="text-[10px] lg:text-sm flex flex-row items-center gap-3 flex-wrap">
           {projectTechs?.map((tech) => (
             <p key={tech}>{tech}</p>

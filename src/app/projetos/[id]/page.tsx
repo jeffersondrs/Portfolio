@@ -20,16 +20,18 @@ export default function ProjectPage() {
 
   return (
     <section
-      className={`flex flex-col items-center w-full h-full sm:h-full sm:py-3 justify-center px-5 py-10 gap-5
+      className={`flex flex-col items-center w-full h-full py-3 justify-center px-5 md:py-12 gap-10
     ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'} `}
     >
-      <h1 className="text-2xl tracking-wider font-bold">{project.title}</h1>
-      <p className="max-w-4xl text-center tracking-wider py-10">
+      <h1 className="text-2xl tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+        {project.title}
+      </h1>
+      <p className="max-w-xl text-center tracking-widest ">
         {project.description}
       </p>
       <div className="flex flex-row justify-center items-center gap-5">
         <Link
-          className={`text-xl hover:text-gray-500 transition duration-300 ease-in-out bg-gray-200 px-5 py-2 rounded-md
+          className={`text-xl hover:text-gray-500 transition duration-300 ease-in-out bg-gray-200 px-5 py-2 rounded-md bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500
             ${isDark ? 'bg-gray-700 text-white' : 'bg-gray-100 text-black'}
             `}
           href={project.link}
@@ -38,7 +40,7 @@ export default function ProjectPage() {
           Github
         </Link>
         <Link
-          className={`text-xl hover:text-gray-500 transition duration-300 ease-in-out bg-gray-200 px-5 py-2 rounded-md
+          className={`text-xl hover:text-gray-500 transition duration-300 ease-in-out bg-gray-200 px-5 py-2 rounded-md bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500
          ${isDark ? 'bg-gray-700 text-white' : 'bg-gray-100 text-black'}
          `}
           href={project.live}
