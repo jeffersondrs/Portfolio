@@ -49,12 +49,12 @@ export default function ProjectPage() {
           Live
         </Link>
       </div>
-      <div className="flex flex-row flex-wrap gap-5 items-start justify-center">
+      <div className="flex flex-row flex-wrap gap-5 items-start justify-center relative">
         {project.image.map((image) => (
           <img
             src={image}
             alt={project.title}
-            className="w-64 h-full"
+            className="w-64 h-full hover:scale-125 transition duration-150 ease-in-out"
             key={image}
           />
         ))}

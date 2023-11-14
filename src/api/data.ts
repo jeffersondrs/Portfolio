@@ -98,5 +98,25 @@ export const projetos = [
     ],
     link: 'https://agency-tech.vercel.app/',
     live: 'https://agency-tech.vercel.app/',
+  },{
+    id: 6,
+    title: 'Analítica',
+
+    description:
+      'Projeto desenvolvido com Nextjs, Typescript, Sass, dentre outras tecnologias. O projeto é um site para um laboratório de produtos de bem estar natural com a opção de envio de receitas e contato. Projeto real para um cliente real. Foi desenvolvido em time com outros desenvolvedores, onde fui um dos responsáveis pelo front-end. AS tasks foram divididas em sprints e o projeto foi entregue em 2 semanas.',
+    techs: [
+      'Nextjs',
+      'Typescript',
+      'Sass',
+    ],
+    image: [
+      '/projeto6/projeto6 (1).png',
+      '/projeto6/projeto6 (2).png',
+      '/projeto6/projeto6 (3).png',
+      '/projeto6/projeto6 (4).png',
+      '/projeto6/projeto6 (5).png',
+    ],
+    link: 'https://freela-starter.vercel.app/',
+    live: 'https://freela-starter.vercel.app/',
   },
 ];
