@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import ThankYouSubmit from './ThankyouSubmit';
+import LoadingBar from './LoadingBar';
 
 interface FormContactProps {
   name: string;
@@ -23,6 +24,7 @@ export default function FormContact() {
     register,
     handleSubmit,
     formState: { errors },
+    clearErrors,
   } = useForm();
 
   const sendMessage = async () => {
@@ -54,7 +56,7 @@ export default function FormContact() {
           onClick={() => {
             window.location.reload();
           }}
-          className="flex flex-row items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg"
+          className="flex flex-row items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg"
         >
           Enviar Novamente!
         </button>
@@ -65,79 +67,82 @@ export default function FormContact() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col items-center justify-center sm:w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r rounded-2xl shadow-xl from-purple-400 to-pink-600"
+      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r rounded-2xl shadow-xl from-orange-500 to-yellow-500"
     >
       <h1 className="text-xl sm:text-2xl font-bold text-center text-white">
         Entre em contato comigo!
       </h1>
-      <div className='flex flex-row w-full gap-3'>
-      <div className="flex flex-col justify-center items-end w-full">
-        <input
-          type="text"
-          placeholder="Nome"
-          className={`w-80 sm:w-full  py-2 px-3 rounded-lg
+      <div className="flex flex-row w-full gap-3">
+        <div className="flex flex-col justify-center items-end w-full">
+          <input
+            type="text"
+            placeholder="Nome"
+            className={`w-80 sm:w-full  py-2 px-3 rounded-lg
             focus:outline-none
-            text-xs md:text-base focus:ring-2 focus:ring-purple-600 focus:border-transparent
+            text-xs md:text-base focus:ring-2 focus:ring-gray-200 focus:border-transparent
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
-          {...register('name', { required: true })}
-          onChange={(e) =>
-            setFormmulary({ ...formmulary, name: e.target.value })
-          }
-        />
-        {errors.name && (
-          <motion.span
-            initial={{ opacity: 0, y: -5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-red-500 absolute text-[10px] md:text-xs pr-2"
-          >
-            Nome é obrigatório
-          </motion.span>
-        )}
-      </div>
-      <div className="flex flex-col justify-center items-end w-full">
-        <input
-          type="email"
-          placeholder="E-mail"
-          className={`w-96 sm:w-full py-2 px-3 rounded-lg
-          focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
+            {...register('name', { required: true })}
+            onChange={(e) => {
+              setFormmulary({ ...formmulary, name: e.target.value });
+              clearErrors('name');
+            }}
+          />
+          {errors.name && (
+            <motion.span
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-red-500 absolute text-[10px] md:text-xs pr-2"
+            >
+              Nome é obrigatório
+            </motion.span>
+          )}
+        </div>
+        <div className="flex flex-col justify-center relative items-end w-full">
+          <input
+            type="email"
+            placeholder="E-mail"
+            className={`w-96 sm:w-full py-2 px-3 rounded-lg
+          focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent
             text-xs md:text-base
            ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
-          {...register('email', { required: true })}
-          onChange={(e) =>
-            setFormmulary({ ...formmulary, email: e.target.value })
-          }
-        />
-        {errors.email && (
-          <motion.span
-            initial={{ opacity: 0, y: -5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-red-500 absolute text-[10px] md:text-xs pr-2"
-          >
-            E-mail é obrigatório
-          </motion.span>
-        )}
+            {...register('email', { required: true })}
+            onChange={(e) => {
+              setFormmulary({ ...formmulary, email: e.target.value });
+              clearErrors('email');
+            }}
+          />
+          {errors.email && (
+            <motion.span
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-red-500 absolute text-[10px] md:text-xs pr-2"
+            >
+              E-mail é obrigatório
+            </motion.span>
+          )}
+        </div>
       </div>
-      </div>
-      <div className="flex flex-col  w-full">
+      <div className="flex flex-col relative w-full">
         <textarea
           placeholder="Mensagem"
           className={`w-full h-40 p-3 rounded-lg
-          focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent
+          focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent
           text-xs md:text-base
           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
           {...register('message', { required: true })}
-          onChange={(e) =>
-            setFormmulary({ ...formmulary, message: e.target.value })
-          }
+          onChange={(e) => {
+            setFormmulary({ ...formmulary, message: e.target.value });
+            clearErrors('message');
+          }}
         />
         {errors.message && (
           <motion.span
             initial={{ opacity: 0, y: -5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-red-500 absolute text-xs pr-2"
+            className="text-red-500 absolute text-xs pr-2 right-0"
           >
             Mensagem é obrigatório
           </motion.span>
@@ -147,8 +152,8 @@ export default function FormContact() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-48 h-12 px-5 rounded-lg bg-gradient-to-r from-blue-400 to-sky-400
-            hover:from-blue-500 hover:to-sky-500 transition-all duration-300 ease-in-out text-white
+        className="w-48 h-12 px-5 rounded-lg bg-orange-600
+             transition-all duration-300 ease-in-out text-white
             shadow-lg hover:shadow-xl font-bold text-lg sm:text-base
           "
       >

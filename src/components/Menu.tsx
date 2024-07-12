@@ -23,7 +23,7 @@ export default function Menu() {
     <motion.div
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
-      className="flex flex-col translate-y-14 left-0 right-0 justify-center  items-center"
+      className="flex flex-col translate-y-14 left-0 right-0 justify-center  items-center display-none md:hidden"
     >
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <motion.ul

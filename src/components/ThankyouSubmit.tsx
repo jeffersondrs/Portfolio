@@ -54,21 +54,21 @@ export default function ThankYouSubmit({ name }: ThankProps) {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-row items-center justify-center gap-5 mt-5 border border-gray-300 rounded-lg p-2"
+        className="flex flex-row items-center justify-center gap-5 mt-5 rounded-lg p-2"
       >
         <Link href="https://twitter.com/kalliadranoth">
           <Twitter
-            size={40}
-            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400 sm:w-6 sm:h-6 ${
-              isDark ? 'text-white' : 'text-black'
+            size={60}
+            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400  ${
+              isDark ? 'text-white' : 'text-sky-500'
             }
             `}
           />
         </Link>
         <Link href="https://github.com/jeffersondrs">
           <Github
-            size={40}
-            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 sm:w-6 sm:h-6 ${
+            size={60}
+            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900  ${
               isDark ? 'text-white' : 'text-black'
             }`}
           />
@@ -76,9 +76,9 @@ export default function ThankYouSubmit({ name }: ThankProps) {
 
         <Link href="https://www.linkedin.com/in/jeffersondrs/">
           <Linkedin
-            size={40}
-            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700 sm:w-6 sm:h-6
-                ${isDark ? 'text-white' : 'text-black'}`}
+            size={60}
+            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700
+                ${isDark ? 'text-white' : 'text-blue-500'}`}
           />
         </Link>
       </motion.div>

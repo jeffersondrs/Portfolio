@@ -25,7 +25,7 @@ export default function ProjectsPage() {
             stiffness: 30,
             restDelta: 0.001,
           }}
-          key={projetos.id}
+          key={projetos.projectId}
           src="/itsme.jpg"
           alt="Toca Hobbit"
           width={1920}

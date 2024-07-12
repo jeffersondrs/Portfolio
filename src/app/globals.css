@@ -14,3 +14,25 @@ html,
 body {
   background-color: rgb(243 244 246);
 }
+
+@layer utilities {
+  .underline-hover {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease-out;
+  }
+  .underline-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-out;
+  }
+
+  .underline-hover:hover::after {
+    width: 100%;
+  }
+}

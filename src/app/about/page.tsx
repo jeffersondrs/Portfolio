@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-// import Image from "next/image";
 import React from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
@@ -35,11 +34,11 @@ export default function AboutPage() {
               restDelta: 0.001,
             }}
             key={about}
-            src={`${about}`}
+            src="tocadohobbit.jpg"
             alt="Toca Hobbit"
             width={1920}
             height={1080}
-            className="z-40 w-56 sm:w-28 translate-x-10 rounded-lg"
+            className="z-40 w-64 translate-x-10 rounded-lg"
           />
         ))}
         <motion.img
@@ -55,7 +54,7 @@ export default function AboutPage() {
           alt="Jefferson Santos"
           width={1920}
           height={1080}
-          className="z-50 w-72 sm:w-36 rounded-lg translate-x-8"
+          className="z-50 w-72 rounded-lg translate-x-8"
         />
         <motion.img
           ref={ref}
@@ -66,7 +65,7 @@ export default function AboutPage() {
             stiffness: 30,
             restDelta: 0.001,
           }}
-          className="w-64 sm:w-36 z-40 rounded-lg"
+          className="w-64 z-40 rounded-lg"
           src="/myfriend.jpg"
           alt="Ozzy"
           width={1920}
@@ -74,7 +73,7 @@ export default function AboutPage() {
         />
       </div>
       <div className=" indent-2 flex flex-col justify-center items-center max-w-2xl p-5 py-5 gap-5">
-        <h1 className="text-4xl sm:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-800 tracking-wider">
+        <h1 className="text-4xl sm:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 tracking-wider">
           Olá novamente, sou o Jefferson
         </h1>
         <p
@@ -87,9 +86,10 @@ export default function AboutPage() {
             className="text-gray-500 absolute -translate-x-10 sm:-translate-x-6"
           />
           Nascido e criado no Rio de Janeiro, Brasil. Sou um desenvolvedor web
-          entusiasta e sonhador, pronto para criar soluções. Atualmente estou
-          cursando Análise e Desenvolvimento de Sistemas na Universidade Veiga
-          de Almeida, e me formo em meados de 2024.
+          entusiasta e sonhador, pronto para criar soluções. Em junho de 2024,
+          me formei Analista e desenvolvedor de sistemas pela Universidade Veiga
+          de Almeida. Pretendo cursar pós-graduação em Engenharia de Software ou
+          Ciência da Computação.
         </p>
         <p
           className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
@@ -154,7 +154,7 @@ export default function AboutPage() {
           dos Anéis: O Retorno do Rei. Meu livro favorito é O Silmarillion.
         </p>
         <div className="flex flex-col justify-center items-center">
-          <Link className="text-blue-500 hover:text-blue-700" href="/contact">
+          <Link className="text-orange-500 hover:text-orange-700" href="/contact">
             Entre em contato comigo
           </Link>
 

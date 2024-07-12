@@ -25,34 +25,81 @@ export default function Navegation({ children }: NavegationProps) {
         transition={{ duration: 0.5 }}
         className={`
       ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
-      flex w-full justify-between sm:justify-between sm:items-center items-center px-4 drop-shadow-md	`}
+      flex w-full justify-between sm:justify-between sm:items-center items-center px-4 drop-shadow-md py-5	`}
       >
         <Link href="/">
           <Logo />
         </Link>
-        <div
-          className="flex items-center space-x-4 sm:hidden transition-all
-        duration-500 ease-in-out transform cursor-pointer
+        <ul
+          className=" items-center space-x-4 transition-all hidden md:flex justify-center
           "
         >
-          <Link href="/" className="hover:text-gray-400">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-gray-400">
-            About
-          </Link>
-          <Link href="/contact" className="hover:text-gray-400">
-            Contact
-          </Link>
-          <Link
-            href="https://jeffersondrsblog.vercel.app/"
-            className="hover:text-gray-400"
-            target='_blank'
-            referrerPolicy='no-referrer'
+          <li
+            className={` transition-all underline-hover ${
+              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
+            }`}
           >
-            Blog
-          </Link>
-        </div>
+            <Link href="/" className="underline-hover">
+              <p
+                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
+                text-2xl
+        "
+              >
+                Home
+              </p>
+            </Link>
+          </li>
+          <li
+            className={` transition-all underline-hover ${
+              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
+            }`}
+          >
+            <Link href="/about" className="underline-hover">
+              <p
+                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
+                text-2xl
+        "
+              >
+                About
+              </p>
+            </Link>
+          </li>{' '}
+          <li
+            className={`hover:text-gray-100 transition-all underline-hover ${
+              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
+            }`}
+          >
+            <Link href="/contact" className="underline-hover">
+              <p
+                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
+                text-2xl
+        "
+              >
+                Contact
+              </p>
+            </Link>
+          </li>{' '}
+          <li
+            className={`hover:text-gray-100 transition-all underline-hover ${
+              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
+            }`}
+          >
+            <Link
+              href="https://jeffersondrsblog.vercel.app/"
+              className="underline-hover"
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              <p
+                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
+                text-2xl
+        "
+              >
+                Blog
+              </p>
+            </Link>
+          </li>
+        </ul>
         <Menu />
         <div className="flex flex-col justify-center items-center ">
           <ToggoeButton />

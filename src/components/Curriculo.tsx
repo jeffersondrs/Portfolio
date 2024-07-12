@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   async function downloadCurriculoEnglish() {
@@ -37,12 +37,15 @@ export default function Home() {
 
   async function downloadCurriculoPortugues() {
     try {
-      const response = await fetch('https://portfolio-backend-2pwo.onrender.com/curriculoptbr', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        'https://portfolio-backend-2pwo.onrender.com/curriculoptbr',
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
         },
-      });
+      );
       if (!response.ok) {
         throw new Error('Erro ao fazer o download do currículo em portiguês.');
       }
@@ -69,15 +72,17 @@ export default function Home() {
     <div className="flex flex-row items-center justify-center gap-2 ">
       <button
         onClick={downloadCurriculoEnglish}
-        className="w-40 flex flex-row items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 ease-in-out"
+        className="w-40 flex flex-row items-center justify-center bg-gradient-to-r from-orange-400 to-yellow-600 hover:from-orange-500 hover:to-yellow-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out "
       >
-        Currículo <br />em inglês
+        Currículo <br />
+        em inglês
       </button>
       <button
         onClick={downloadCurriculoPortugues}
-        className="w-40 flex flex-row items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 ease-in-out"
+        className="w-40 flex flex-row items-center justify-center
+        bg-gradient-to-r from-orange-400 to-yellow-600 hover:from-orange-500 hover:to-yellow-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
       >
-       Currículo < br/> em português
+        Currículo <br /> em português
       </button>
     </div>
   );

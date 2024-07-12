@@ -1,69 +1,70 @@
-export const images = [
-  'https://images.unsplash.com/photo-1540273777513-7c4973aa2cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1687274999959-dd29003bfa17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1687800132770-8f1600a5849e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80',
-  'https://images.unsplash.com/photo-1687709834461-85009675e422?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-  'https://images.unsplash.com/photo-1687507318101-225772a6e2aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1687507593516-abd148e0bac9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+import {ProjectLayoutProps} from '@/types/global-types';
+
+export const projectImages = [
+  'https://projectImages.unsplash.com/photo-1540273777513-7c4973aa2cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+  'https://projectImages.unsplash.com/photo-1687274999959-dd29003bfa17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+  'https://projectImages.unsplash.com/photo-1687800132770-8f1600a5849e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80',
+  'https://projectImages.unsplash.com/photo-1687709834461-85009675e422?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
+  'https://projectImages.unsplash.com/photo-1687507318101-225772a6e2aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+  'https://projectImages.unsplash.com/photo-1687507593516-abd148e0bac9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
 ];
 export const aboutMe = [
-  'https://images.unsplash.com/photo-1600071075057-fc3fb218e6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+  'https://projectImages.unsplash.com/photo-1600071075057-fc3fb218e6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
 ];
 
-export const projetos = [
+export const projetos: ProjectLayoutProps[] = [
   {
-    id: 1,
-    title: 'Web Ecommerce',
-    techs: ['Nextjs', 'Typescript', 'TailWindCss'],
-    description:
+  projectId:1,
+    projectName: 'Web Ecommerce',
+    projectTechs: ['Nextjs', 'Typescript', 'TailWindCss'],
+    projectDescription:
       'Lading Page Criada com React, Vite, Typescript Dependencias: React-router-dom, react-icons, TailWindCss, Styled-Component, Sass, dentre outras que irei adicionando conforme for necessário.',
-    image: [
+    projectImage: [
       'https://raw.githubusercontent.com/jeffersondrs/web-ecommerce/main/public/home.png',
       'https://raw.githubusercontent.com/jeffersondrs/web-ecommerce/main/public/products.png',
       'https://raw.githubusercontent.com/jeffersondrs/web-ecommerce/main/public/about.png',
       'https://raw.githubusercontent.com/jeffersondrs/web-ecommerce/main/public/support.png',
     ],
-    link: 'https://github.com/jeffersondrs/web-ecommerce',
-    live: 'https://web-ecommerce-eta.vercel.app/',
+    projectLink: 'https://github.com/jeffersondrs/web-ecommerce',
+    projectLive: 'https://web-ecommerce-eta.vercel.app/',
   },
   {
-    id: 2,
-    title: 'Blog Pessoal',
+  projectId:2,
+    projectName: 'Blog Pessoal',
 
-    description:
+    projectDescription:
       'Blog pessoal criado para compartilhar conhecimento e experiências, além de ser um projeto para estudo e prática de tecnologias como Nextjs, TailwindCss, SASS, GraphQL, dentre outras. O projeto está em constante atualização, com novas funcionalidades e melhorias no código.',
-    techs: ['TailwindCss', 'Nextjs', 'SASS', 'GraphQL'],
+    projectTechs: ['TailwindCss', 'Nextjs', 'SASS', 'GraphQL'],
 
-    image: [
+    projectImage: [
       'https://raw.githubusercontent.com/jeffersondrs/MyBlog/main/public/home.png',
       'https://raw.githubusercontent.com/jeffersondrs/MyBlog/main/public//post.png',
     ],
-    link: 'https://github.com/jeffersondrs/MyBlog',
-    live: 'https://jeffersondrsblog.vercel.app/',
+    projectLink: 'https://github.com/jeffersondrs/MyBlog',
+    projectLive: 'https://jeffersondrsblog.vercel.app/',
   },
   {
-    id: 3,
-    title: 'Barbearia Shop/Blog',
-
-    description:
+  projectId:3,
+    projectName: 'Barbearia Shop/Blog',
+    projectDescription:
       'Projeto desenvolvido para juntar e-commerce, agendamento, contato de clientes, blog e institucional da empresa.',
-    techs: ['Nextjs', 'TailwindCss', 'Typescript', 'Daisyui'],
-    image: [
+    projectTechs: ['Nextjs', 'TailwindCss', 'Typescript', 'Daisyui'],
+    projectImage: [
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/barbershopproject.png',
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/contactbarberproject.png',
       'https://raw.githubusercontent.com/jeffersondrs/barberariablogshop/main/public/blogbarberproject.png',
     ],
-    link: 'https://github.com/jeffersondrs/barberariablogshop',
-    live: 'https://barberariablogshop.vercel.app/',
+    projectLink: 'https://github.com/jeffersondrs/barberariablogshop',
+    projectLive: 'https://barberariablogshop.vercel.app/',
   },
   {
-    id: 4,
-    title: 'Note Check',
+  projectId:4,
+    projectName: 'Note Check',
 
-    description:
+    projectDescription:
       'Projeto desenvolvido com React Native/Expo para gerenciar notas, com opção de adicionar, editar, excluir e marcar como concluída, além de listas de tarefas. Estou contantemente atualizando o projeto, adicionando novas funcionalidades e melhorando o código.',
-    techs: ['React Native', 'Expo', 'Typescript', 'Styled-Components'],
-    image: [
+    projectTechs: ['React Native', 'Expo', 'Typescript', 'Styled-Components'],
+    projectImage: [
       'https://play-lh.googleusercontent.com/1ojJx1nyAC91HHZSc152eiQ6KQ9l0GiaDHiTFTxFfN7OcG4vxtvpoq5W9YhU92lirMw=w2560-h1440-rw',
       'https://play-lh.googleusercontent.com/idOzzcD6eCZF-7ix3Eud9qVrFFn3g6PNHrMzk7Af3i6vus6kAInFaAyAI1Ik9k4cMw=w2560-h1440-rw',
       'https://play-lh.googleusercontent.com/IY_YOn7nDJL6mHrqbkaMMnwRbSJl1qlfuAzpnZ_lr_3--Qol_JthKD-ZgL56hoXLsY8=w2560-h1440-rw',
@@ -73,16 +74,16 @@ export const projetos = [
       'https://play-lh.googleusercontent.com/vwh8nbanH-ac6tRy6U9r7gKcKrKvUzWSp_Phc9ZCksl42jpxPvXCXbxNwxExagnbA2s=w2560-h1440-rw',
       'https://play-lh.googleusercontent.com/0jEWvAzIPnohzZocpK3EzL8vnU_hfHNgvZilbDC6DgW0eNVuY7a4jcjwgFnUXEX5J1im=w2560-h1440-rw',
     ],
-    link: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
-    live: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
+    projectLink: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
+    projectLive: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
   },
   {
-    id: 5,
-    title: 'Agency Tech',
+  projectId:5,
+    projectName: 'Agency Tech',
 
-    description:
+    projectDescription:
       'Projeto desenvolvido com Nextjs, Typescript, TailwindCss, React Hook Form, MongoDB, Nodejs, dentre outras tecnologias. O projeto é um site de uma agência de tecnologia, com opção de cadastro de clientes, serviços, produtos, blog, contato, etc. Atualmente é uma empresa fictícia, mas estou trabalhando para torná-la real.',
-    techs: [
+    projectTechs: [
       'Nextjs',
       'Nodejs',
       'Typescript',
@@ -90,33 +91,33 @@ export const projetos = [
       'MongoDb',
       'React Hook Form',
     ],
-    image: [
+    projectImage: [
       '/imagens/agencytech-1.png',
       '/imagens/agencytech-2.png',
       '/imagens/agencytech-3.png',
       '/imagens/agencytech-4.png',
     ],
-    link: 'https://agency-tech.vercel.app/',
-    live: 'https://agency-tech.vercel.app/',
+    projectLink: 'https://agency-tech.vercel.app/',
+    projectLive: 'https://agency-tech.vercel.app/',
   },{
-    id: 6,
-    title: 'Analítica',
+  projectId:6,
+    projectName: 'Analítica',
 
-    description:
-      'Projeto desenvolvido com Nextjs, Typescript, Sass, dentre outras tecnologias. O projeto é um site para um laboratório de produtos de bem estar natural com a opção de envio de receitas e contato. Projeto real para um cliente real. Foi desenvolvido em time com outros desenvolvedores, onde fui um dos responsáveis pelo front-end. AS tasks foram divididas em sprints e o projeto foi entregue em 2 semanas.',
-    techs: [
+    projectDescription:
+      'Projeto desenvolvido com Nextjs, Typescript, Sass, dentre outras tecnologias. O projeto é um site para um laboratório de produtos de bem estar natural com a opção de envio de receitas e contato. Projeto real para um cliente real. Foi desenvolvido em colaboração com outros desenvolvedores, onde fui um dos responsáveis pelo front-end. As tasks foram divididas em sprints, utilizamos o asana para projetar as tasks e o projeto foi entregue em 2 meses.',
+    projectTechs: [
       'Nextjs',
       'Typescript',
       'Sass',
     ],
-    image: [
+    projectImage: [
       '/projeto6/projeto6 (1).png',
       '/projeto6/projeto6 (2).png',
       '/projeto6/projeto6 (3).png',
       '/projeto6/projeto6 (4).png',
       '/projeto6/projeto6 (5).png',
     ],
-    link: 'https://freela-starter.vercel.app/',
-    live: 'https://freela-starter.vercel.app/',
+    projectLink: 'https://freela-starter.vercel.app/',
+    projectLive: 'https://freela-starter.vercel.app/',
   },
 ];
