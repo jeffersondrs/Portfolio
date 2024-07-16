@@ -18,6 +18,7 @@ export default function ContactPage() {
       <div className="pt-10">
         <Curriculo />
       </div>
+      
     </section>
   );
 }
