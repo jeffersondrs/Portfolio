@@ -11,8 +11,6 @@ export default function ProjectLayout({
   projectImage,
   projectName,
   projectTechs,
-  projectLink,
-  projectLive,
 }: ProjectLayoutProps) {
   const { isDark } = useContext(ThemeContext);
 
@@ -33,7 +31,7 @@ export default function ProjectLayout({
         ${isDark ? 'text-white' : 'text-black'}
       `}
       >
-        <h1 className="text-lg font-bold lg:text-xl bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-600">
+        <h1 className="text-lg font-bold lg:text-xl">
           {projectName}
         </h1>
         <h2 className="text-[10px] lg:text-sm flex flex-row items-center gap-3 flex-wrap">
@@ -48,7 +46,9 @@ export default function ProjectLayout({
             href={`/projetos/${projectId}`}
             className="flex flex-row justify-between items-center bg-gray-400 hover:bg-gray-600  text-white py-3 px-5 sm:px-4 sm:py-2 transition-all gap-3 hover:gap-5 duration-500 ease-in-out rounded-full"
           >
-            <button className="text-xs">Ver mais</button>
+            <button type="button" className="text-xs">
+              Ver mais
+            </button>
             <MoveRight size={18} />
           </Link>
         </div>

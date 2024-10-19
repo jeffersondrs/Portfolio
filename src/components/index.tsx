@@ -14,6 +14,7 @@ import Curriculo from './Curriculo';
 import ThankYouSubmit from './ThankyouSubmit';
 import ToggoeButton from './ToggleButton';
 import SectionMyJourney from './SectionMyJourney';
+import SectioProjects from './SectionProjects';
 
 export {
   Logo,
@@ -32,4 +33,5 @@ export {
   ThankYouSubmit,
   ToggoeButton,
   SectionMyJourney,
+  SectioProjects,
 };

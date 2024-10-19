@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { projetos } from '@/api/data';
+import { projetos } from '@/utils/data';
 
 type ModalProps = {
   onClick: () => void;

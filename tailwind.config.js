@@ -25,5 +25,5 @@ module.exports = {
       '2xl': { min: '1536px' },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

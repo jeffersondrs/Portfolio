@@ -7,3 +7,10 @@ export type ProjectLayoutProps = {
   projectTechs: string[];
   projectLive: string;
 };
+
+export type JourneyProps = {
+  title: string;
+  description: string;
+  date: string;
+  image: string;
+};

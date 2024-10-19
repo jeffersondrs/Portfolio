@@ -1,4 +1,4 @@
-import { ProjectLayoutProps } from '@/types/global-types';
+import { JourneyProps, ProjectLayoutProps } from '@/types/global-types';
 
 export const projectImages = [
   'https://projectImages.unsplash.com/photo-1540273777513-7c4973aa2cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
@@ -118,5 +118,43 @@ export const projetos: ProjectLayoutProps[] = [
     ],
     projectLink: 'https://freela-starter.vercel.app/',
     projectLive: 'https://freela-starter.vercel.app/',
+  },
+];
+
+export const myJourney: JourneyProps[] = [
+  {
+    date: '2021',
+    title: 'Junho de 2021',
+    description: `Comecei a estudar programação e a aprender sobre tecnologia. Entrei em um curso técnico de informática para internet do Senac. Tive aulas de HTML, CSS, JavaScript e C#, porém o curso não me dava muitas possibilidades de estágio, então decidi começar um curso superior de tecnologia.`,
+    image:
+      'https://images.unsplash.com/photo-1701940616810-207c146d384a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    date: '2022',
+    title: 'Fevereiro de 2022',
+    description: `Ingressei na faculdade de Análise e Desenvolvimento de Sistemas, na Universidade Veiga de Almeida. Comecei a estudar Java, SQL, UML e outras tecnologias. Fiz um estágio no Ministério Público do Trabalho (MPT). Foi uma experiência incrível, onde pude aprender muito sobre desenvolvimento de sistemas e sobre o funcionamento do MPT. Nessa mesma época, comecei a estudar Javascript e depois de dominar o básico, comecei a estudar React.`,
+    image:
+      'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    date: '2022',
+    title: 'Ainda em 2022',
+    description: `Já estudando Javascript e React, comecei a fazer projetos pessoais e a estudar sobre desenvolvimento web. Fiz um curso de React, onde aprendi sobre Condescription API, Redux, Redux Saga, Redux Thunk, Hooks e muito mais. Fiz um projeto de um blog pessoal, onde pude aplicar tudo que aprendi no curso. Foi uma experiência incrível, onde pude aprender muito sobre desenvolvimento web e sobre React. E com isso, meus estudos de nodejs e expressjs começaram.`,
+    image:
+      'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    date: '2023',
+    title: 'No ano de 2023',
+    description: `Comecei a estudar NodeJS e ExpressJS, fiz vários cursos na Udemy, Rocketseat, Alura entre outros. Fiz um projeto de um e-commerce, onde pude aplicar tudo que aprendi nos cursos. Foi uma experiência incrível, onde pude aprender muito sobre desenvolvimento web e sobre NodeJS e ExpressJS. E com isso, meus estudos de MongoDB começaram. Nesse mesmo ano, comecei a estudar sobre Docker, Kubernetes e Jenkins, onde pude aprender sobre CI/CD e sobre deploy de aplicações em containers. E estava me faltando algo para completar minha stack, então comecei a estudar sobre React native e Typescript. O que me ajudou a evoluir muito, com esses estudos também vieram mais aprofundamento em TDD, DDD, SOLID e Clean Code. React native me caiu como uma luva, por ter a experiência com React, foi muito fácil de aprender e aplicar. Hoje domino Expo e deploy de aplicações mobile.`,
+    image:
+      'https://images.unsplash.com/photo-1603380353725-f8a4d39cc41e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    date: '2024',
+    title: 'Até aqui!',
+    description: `Hoje sou um desenvolvedor fullstack, com experiência em React, React Native, NodeJS, ExpressJS, MongoDB, Docker, Kubernetes, Typescript, TDD, DDD, MVC, MVP, SOLID e Clean Code. Estou sempre estudando e me aprimorando, para me tornar um desenvolvedor cada vez melhor. Tenho inglês avançado e estou sempre estudando para melhorar meu inglês. E estou sempre em busca de novos desafios e de novas oportunidades.`,
+    image:
+      'https://images.unsplash.com/photo-1623460445304-4db6c271ef62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
 ];

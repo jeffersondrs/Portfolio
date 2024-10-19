@@ -3,7 +3,7 @@
 import React from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
-import { projetos } from '@/api/data';
+import { projetos } from '@/utils/data';
 import { motion } from 'framer-motion';
 
 export default function ProjectsPage() {

@@ -28,70 +28,38 @@ export default function Navegation({ children }: NavegationProps) {
           <Logo />
         </Link>
         <ul
-          className=" items-center space-x-4 transition-all hidden md:flex justify-center
+          className=" items-center space-x-4 transition-all hidden md:flex justify-center gap-5
           "
         >
-          <li
-            className={` transition-all underline-hover ${
-              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
-            }`}
-          >
+          <li className="transition-all underline-hover">
             <Link href="/" className="underline-hover">
-              <p
-                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-base
-        "
-              >
+              <p className="uppercase transition-all font-black tracking-wider text-start whitespace-pre-wrap break-words text-sm">
                 Home
               </p>
             </Link>
           </li>
-          <li
-            className={` transition-all underline-hover ${
-              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
-            }`}
-          >
+          <li className="transition-all underline-hover">
             <Link href="/about" className="underline-hover">
-              <p
-                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-base
-        "
-              >
+              <p className="uppercase transition-all font-black tracking-wider text-start whitespace-pre-wrap break-words text-sm">
                 About
               </p>
             </Link>
           </li>{' '}
-          <li
-            className={`hover:text-gray-100 transition-all underline-hover ${
-              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
-            }`}
-          >
+          <li className="transition-all underline-hover">
             <Link href="/contact" className="underline-hover">
-              <p
-                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-base
-        "
-              >
+              <p className="uppercase transition-all font-black tracking-wider text-start whitespace-pre-wrap break-words text-sm">
                 Contact
               </p>
             </Link>
           </li>{' '}
-          <li
-            className={`hover:text-gray-100 transition-all underline-hover ${
-              isDark ? 'hover:text-orange-500' : 'hover:text-yellow-600'
-            }`}
-          >
+          <li className="transition-all underline-hover">
             <Link
               href="https://jeffersondrsblog.vercel.app/"
               className="underline-hover"
               target="_blank"
               referrerPolicy="no-referrer"
             >
-              <p
-                className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-base
-        "
-              >
+              <p className="uppercase transition-all font-black tracking-wider text-start whitespace-pre-wrap break-words text-sm">
                 Blog
               </p>
             </Link>

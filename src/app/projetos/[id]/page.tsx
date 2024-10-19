@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { projetos } from '@/api/data';
+import { projetos } from '@/utils/data';
 import { useState } from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';

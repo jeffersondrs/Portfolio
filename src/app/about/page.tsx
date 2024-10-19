@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
-import { aboutMe } from '@/api/data';
+import { aboutMe } from '@/utils/data';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useFollowPointer } from '@/hooks/useFollowPointer';

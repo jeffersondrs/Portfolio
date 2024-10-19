@@ -1,10 +1,9 @@
 'use client';
 
+import React, { useContext } from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
-import { useContext } from 'react';
 import Hello from '@/components/Hello';
-import { ProjectLayout, SectionMyJourney } from '@/components/index';
-import { projetos } from '@/api/data';
+import { SectionMyJourney, SectioProjects } from '@/components/index';
 
 export default function Home() {
   const { isDark } = useContext(ThemeContext);
@@ -17,21 +16,8 @@ export default function Home() {
     `}
     >
       <Hello />
-
-      {/* <div className="grid grid-cols-2 py-10 gap-10">
-        {projetos.map((projeto) => (
-          <ProjectLayout
-            key={projeto.projectId}
-            projectId={projeto.projectId}
-            projectName={projeto.projectName}
-            projectDescription={projeto.projectDescription}
-            projectImage={projeto.projectImage}
-            projectTechs={projeto.projectTechs}
-            projectLink={projeto.projectLink}
-            projectLive={projeto.projectLive}
-          />
-        ))}
-      </div> */}
+      <SectionMyJourney />
+      <SectioProjects />
     </main>
   );
 }
