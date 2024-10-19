@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MoveRight } from 'lucide-react';
 import { Carroucel } from './Carroucel';
-import {ProjectLayoutProps} from '@/types/global-types';
+import { ProjectLayoutProps } from '@/types/global-types';
 
 export default function ProjectLayout({
   projectId,
@@ -25,7 +25,7 @@ export default function ProjectLayout({
           ? 'bg-gray-900 text-white hover:shadow-sm hover:bg-gray-800'
           : 'bg-gray-200 text-black hover:shadow-sm hover:bg-slate-50'
       }
-    w-full overflow-hidden rounded-3xl shadow-lg transition-all duration-500 ease-in-out text-gray-100  flex lg:flex-row flex-col justify-center items-center hover:scale-[101%] transform hover:shadow-2xl gap-2 h-full lg:w-[100%]
+    w-full overflow-hidden shadow-lg transition-all duration-500 ease-in-out text-gray-100  flex lg:flex-row flex-col justify-center items-center hover:scale-[101%] transform hover:shadow-2xl gap-2 h-full lg:w-[100%]
     `}
       key={projectId}
     >
@@ -35,7 +35,9 @@ export default function ProjectLayout({
         ${isDark ? 'text-white' : 'text-black'}
       `}
       >
-        <h1 className="text-lg font-bold lg:text-xl bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-600">{projectName}</h1>
+        <h1 className="text-lg font-bold lg:text-xl bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-600">
+          {projectName}
+        </h1>
         <h2 className="text-[10px] lg:text-sm flex flex-row items-center gap-3 flex-wrap">
           {projectTechs?.map((tech) => (
             <p key={tech}>{tech}</p>

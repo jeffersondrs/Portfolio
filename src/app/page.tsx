@@ -3,7 +3,7 @@
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
 import Hello from '@/components/Hello';
-import ProjectLayout from '@/components/ProjectLayout';
+import { ProjectLayout, SectionMyJourney } from '@/components/index';
 import { projetos } from '@/api/data';
 
 export default function Home() {
@@ -13,13 +13,12 @@ export default function Home() {
     <main
       className={`
     ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
-    flex flex-col items-center w-full h-full sm:h-full sm:py-3 justify-center px-5 py-10 sm:px-3 gap-5
+    flex flex-col items-center max-w-[100rem] h-full justify-center px-5 py-10 w-full
     `}
     >
-      <div className="flex flex-col justify-center items-center gap-20 sm:gap-5 py-5">
-        <Hello />
-      </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 py-10 gap-10">
+      <Hello />
+      
+      {/* <div className="grid grid-cols-2 py-10 gap-10">
         {projetos.map((projeto) => (
           <ProjectLayout
             key={projeto.projectId}
@@ -32,7 +31,7 @@ export default function Home() {
             projectLive={projeto.projectLive}
           />
         ))}
-      </div>
+      </div> */}
     </main>
   );
 }

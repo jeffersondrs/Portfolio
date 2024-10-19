@@ -3,8 +3,7 @@
 import React from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
-import FormContact from '@/components/FormContact';
-import Curriculo from '@/components/Curriculo';
+import { Contact, Curriculo } from '@/components/index';
 
 export default function ContactPage() {
   const { isDark } = useContext(ThemeContext);
@@ -14,11 +13,10 @@ export default function ContactPage() {
     ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
     `}
     >
-      <FormContact />
+      <Contact />
       <div className="pt-10">
         <Curriculo />
       </div>
-      
     </section>
   );
 }

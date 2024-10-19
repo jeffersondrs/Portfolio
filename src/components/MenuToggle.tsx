@@ -21,16 +21,18 @@ const Path = (props: PathProps) => {
   );
 };
 
-export const MenuToggle = ({ toggle }: any) => {
+export default function MenuToggle({ toggle }: { toggle: () => void }) {
   const { isDark } = useContext(ThemeContext);
   return (
     <button
-      className={`rounded-full w-10 h-10 sm:flex flex-col justify-center items-center hidden ${
+      type="button"
+      aria-label="Toggle Menu"
+      className={`rounded-full w-8 h-8 sm:flex flex-col justify-center items-center hidden ${
         isDark ? "bg-gray-600" : "bg-gray-200"
       }`}
       onClick={toggle}
     >
-      <svg width="23" height="23" viewBox="0 0 23 23">
+      <svg width="16" height="16" viewBox="0 0 20 20">
         <Path
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },

@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import ThankYouSubmit from './ThankyouSubmit';
-import LoadingBar from './LoadingBar';
 
 interface FormContactProps {
   name: string;

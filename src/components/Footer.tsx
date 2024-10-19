@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { Github, Linkedin } from 'lucide-react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
@@ -14,52 +13,42 @@ export default function Footer() {
     <footer
       className={`
       ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-200/60 text-black'}
-      flex justify-center items-center w-full p-10 sm:p-5 bg-gray-100 flex-col sm:text-xs
+      flex justify-center items-center w-full p-5 bg-gray-100 flex-col max-w-[100rem]
     `}
     >
       <div className="flex flex-row gap-3">
         <Link href="https://twitter.com/kalliadranoth">
           <FaXTwitter
-            size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 sm:w-6 sm:h-6"
+            size={24}
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 w-6 h-6"
           />
         </Link>
         <Link href="https://github.com/jeffersondrs">
           <Github
-            size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 sm:w-6 sm:h-6"
+            size={24}
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900 w-6 h-6"
           />
         </Link>
 
         <Link href="https://www.linkedin.com/in/jeffersondrs/">
           <Linkedin
-            size={40}
-            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700 sm:w-6 sm:h-6"
+            size={24}
+            className="hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700 w-6 h-6"
           />
         </Link>
       </div>
-      <div className="flex flex-col justify-center items-center md:flex-row gap-3 mt-5 sm:mt-1">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-3">
         <p className="tracking-wider">
           Feito com <span className="text-red-500">❤️</span> por {' '}
           <Link
             className="text-blue-500 hover:text-blue-700 transition-all duration-200 ease-in-out"
             href="
-          https://twitter.com/kalliadranoth"
+          https://x.com/kalliadranoth"
           >
             Jefferson Santos
           </Link>
         </p>
-        <Link
-          className="text-blue-500 hover:text-blue-700 transition-all duration-200 ease-in-out"
-          href="https://www.buymeacoffee.com/jeffersondrs"
-        >
-          <motion.img
-            whileHover={{ scale: 1.1 }}
-            src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=jeffersondrs&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
-            alt="Buy Me A Coffee"
-            className="h-6 w-28"
-          />
-        </Link>
+      
       </div>
       <div className='py-2'>
         <p className="text-sm sm:text-xs text-gray-500">

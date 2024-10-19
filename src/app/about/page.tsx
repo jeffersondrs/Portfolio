@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useFollowPointer } from '@/hooks/useFollowPointer';
 import { Dog, Gamepad2, Home, MapPin, Swords } from 'lucide-react';
-import Curriculo from '@/components/Curriculo';
+import { Curriculo } from '@/components/index';
 
 export default function AboutPage() {
   const { isDark } = useContext(ThemeContext);
@@ -154,7 +154,10 @@ export default function AboutPage() {
           dos Anéis: O Retorno do Rei. Meu livro favorito é O Silmarillion.
         </p>
         <div className="flex flex-col justify-center items-center">
-          <Link className="text-orange-500 hover:text-orange-700" href="/contact">
+          <Link
+            className="text-orange-500 hover:text-orange-700"
+            href="/contact"
+          >
             Entre em contato comigo
           </Link>
 

@@ -25,7 +25,7 @@ export default function Navegation({ children }: NavegationProps) {
         transition={{ duration: 0.5 }}
         className={`
       ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
-      flex w-full justify-between sm:justify-between sm:items-center items-center px-4 drop-shadow-md py-5	h-44 xl:h-64`}
+      flex items-center px-1 justify-between drop-shadow-sm w-full h-24 max-w-[100rem]`}
       >
         <Link href="/">
           <Logo />
@@ -42,7 +42,7 @@ export default function Navegation({ children }: NavegationProps) {
             <Link href="/" className="underline-hover">
               <p
                 className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-2xl
+                text-base
         "
               >
                 Home
@@ -57,7 +57,7 @@ export default function Navegation({ children }: NavegationProps) {
             <Link href="/about" className="underline-hover">
               <p
                 className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-2xl
+                text-base
         "
               >
                 About
@@ -72,7 +72,7 @@ export default function Navegation({ children }: NavegationProps) {
             <Link href="/contact" className="underline-hover">
               <p
                 className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-2xl
+                text-base
         "
               >
                 Contact
@@ -92,7 +92,7 @@ export default function Navegation({ children }: NavegationProps) {
             >
               <p
                 className="transition-all font-black text-transparent tracking-wider bg-clip-text bg-gradient-to-r text-start whitespace-pre-wrap break-words from-yellow-600 to-orange-500
-                text-2xl
+                text-base
         "
               >
                 Blog
@@ -101,10 +101,7 @@ export default function Navegation({ children }: NavegationProps) {
           </li>
         </ul>
         <Menu />
-        <div className="flex flex-col justify-center items-center ">
-          <ToggoeButton />
-          <span className="text-xs">Theme</span>
-        </div>
+        <ToggoeButton />
       </motion.nav>
       {children}
     </>

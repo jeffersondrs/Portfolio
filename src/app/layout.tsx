@@ -41,7 +41,7 @@ export default function RootLayout({
           href="/public/favicon-16x16.png"
         />
       </Head>
-      <body className={`${poppins.className}`}>
+      <body className={`${poppins.className} flex flex-col justify-center items-center`}>
         <ThemeProvider>
           <Navegation>{children}</Navegation>
           <Footer />

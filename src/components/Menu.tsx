@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
-import { MenuToggle } from './MenuToggle';
+import MenuToggle from './MenuToggle';
 import Link from 'next/link';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
@@ -23,7 +23,7 @@ export default function Menu() {
     <motion.div
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
-      className="flex flex-col translate-y-14 left-0 right-0 justify-center  items-center display-none md:hidden"
+      className="flex flex-col translate-y-14 left-0 right-0 justify-center  items-center display-none md:hidden z-50"
     >
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <motion.ul
@@ -48,7 +48,7 @@ export default function Menu() {
           },
         }}
         style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
-        className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-32 ${
+        className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-40 z-50 ${
           isOpen ? 'bg-gray-200' : 'bg-gray-100'
         }
           ${isDark ? 'bg-gray-900' : 'bg-gray-100'}
@@ -98,11 +98,13 @@ export default function Menu() {
           </motion.li>
         </Link>
         <Link
-            href="https://jeffersondrsblog.vercel.app/"
-            className="hover:text-gray-400"
-            target='_blank'
-            referrerPolicy='no-referrer'
-          >          <motion.li
+          href="https://jeffersondrsblog.vercel.app/"
+          className="hover:text-gray-400"
+          target="_blank"
+          referrerPolicy="no-referrer"
+        >
+          {' '}
+          <motion.li
             className={`
              p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
                isDark
