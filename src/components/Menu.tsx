@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import MenuToggle from './MenuToggle';
@@ -48,7 +49,7 @@ export default function Menu() {
           },
         }}
         style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
-        className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-40 z-50 ${
+        className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-40 ${
           isOpen ? 'bg-gray-200' : 'bg-gray-100'
         }
           ${isDark ? 'bg-gray-900' : 'bg-gray-100'}

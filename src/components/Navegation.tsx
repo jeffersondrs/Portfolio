@@ -1,13 +1,10 @@
 'use client';
 
+import React, { useContext } from 'react';
 import Link from 'next/link';
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '@/context/ThemeProvider';
-import { useContext } from 'react';
-import ToggoeButton from './ToggleButton';
-import Menu from './Menu';
-import Logo from './Logo';
+import { Logo, Menu, ToggoeButton } from '@/components/index';
 interface NavegationProps {
   children?: React.ReactNode;
 }

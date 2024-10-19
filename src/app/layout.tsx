@@ -1,13 +1,43 @@
-import Navegation from '@/components/Navegation';
+import { Navegation, Footer } from '@/components/index';
 import './globals.css';
 import { Poppins } from 'next/font/google';
-import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/context/ThemeProvider';
-import Head from 'next/head';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Jefferson Santos',
   description: 'Web Site Pessoal, desenvolvido com Nextjs ❤️',
+  creator: 'Jefferson Santos',
+  keywords: [
+    'Nextjs',
+    'React',
+    'Tailwindcss',
+    'TypeScript',
+    'SEO',
+    'Jefferson Santos',
+    'Web Site Pessoal',
+    'Web Site',
+    'Pessoal',
+  ],
+  icons: [
+    {
+      href: '/favicon.ico',
+      rel: 'icon',
+      type: 'image/x-icon',
+      url: '/favicon.ico',
+    },
+    {
+      href: '/favicon.ico',
+      rel: 'shortcut icon',
+      type: 'image/x-icon',
+      url: '/favicon.ico',
+    },
+  ],
+  robots: {
+    googleBot: 'index, follow',
+    'max-snippet': 50,
+    'max-image-preview': 'large',
+  },
 };
 
 const poppins = Poppins({
@@ -22,26 +52,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/public/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/public/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/public/favicon-16x16.png"
-        />
-      </Head>
-      <body className={`${poppins.className} flex flex-col justify-center items-center`}>
+      <body
+        className={`${poppins.className} flex flex-col justify-center items-center`}
+      >
         <ThemeProvider>
           <Navegation>{children}</Navegation>
           <Footer />

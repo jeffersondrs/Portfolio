@@ -17,7 +17,7 @@ export default function Home() {
     `}
     >
       <Hello />
-      
+
       {/* <div className="grid grid-cols-2 py-10 gap-10">
         {projetos.map((projeto) => (
           <ProjectLayout

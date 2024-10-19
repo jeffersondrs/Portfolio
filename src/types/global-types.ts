@@ -6,4 +6,4 @@ export type ProjectLayoutProps = {
   projectLink: string;
   projectTechs: string[];
   projectLive: string;
-}
+};

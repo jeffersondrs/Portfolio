@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+'use client';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';

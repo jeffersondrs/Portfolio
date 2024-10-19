@@ -1,4 +1,4 @@
-import {ProjectLayoutProps} from '@/types/global-types';
+import { ProjectLayoutProps } from '@/types/global-types';
 
 export const projectImages = [
   'https://projectImages.unsplash.com/photo-1540273777513-7c4973aa2cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
@@ -14,7 +14,7 @@ export const aboutMe = [
 
 export const projetos: ProjectLayoutProps[] = [
   {
-  projectId:1,
+    projectId: 1,
     projectName: 'Web Ecommerce',
     projectTechs: ['Nextjs', 'Typescript', 'TailWindCss'],
     projectDescription:
@@ -29,7 +29,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://web-ecommerce-eta.vercel.app/',
   },
   {
-  projectId:2,
+    projectId: 2,
     projectName: 'Blog Pessoal',
 
     projectDescription:
@@ -44,7 +44,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://jeffersondrsblog.vercel.app/',
   },
   {
-  projectId:3,
+    projectId: 3,
     projectName: 'Barbearia Shop/Blog',
     projectDescription:
       'Projeto desenvolvido para juntar e-commerce, agendamento, contato de clientes, blog e institucional da empresa.',
@@ -58,7 +58,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://barberariablogshop.vercel.app/',
   },
   {
-  projectId:4,
+    projectId: 4,
     projectName: 'Note Check',
 
     projectDescription:
@@ -74,11 +74,13 @@ export const projetos: ProjectLayoutProps[] = [
       'https://play-lh.googleusercontent.com/vwh8nbanH-ac6tRy6U9r7gKcKrKvUzWSp_Phc9ZCksl42jpxPvXCXbxNwxExagnbA2s=w2560-h1440-rw',
       'https://play-lh.googleusercontent.com/0jEWvAzIPnohzZocpK3EzL8vnU_hfHNgvZilbDC6DgW0eNVuY7a4jcjwgFnUXEX5J1im=w2560-h1440-rw',
     ],
-    projectLink: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
-    projectLive: 'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
+    projectLink:
+      'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
+    projectLive:
+      'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
   },
   {
-  projectId:5,
+    projectId: 5,
     projectName: 'Agency Tech',
 
     projectDescription:
@@ -99,17 +101,14 @@ export const projetos: ProjectLayoutProps[] = [
     ],
     projectLink: 'https://agency-tech.vercel.app/',
     projectLive: 'https://agency-tech.vercel.app/',
-  },{
-  projectId:6,
+  },
+  {
+    projectId: 6,
     projectName: 'Analítica',
 
     projectDescription:
       'Projeto desenvolvido com Nextjs, Typescript, Sass, dentre outras tecnologias. O projeto é um site para um laboratório de produtos de bem estar natural com a opção de envio de receitas e contato. Projeto real para um cliente real. Foi desenvolvido em colaboração com outros desenvolvedores, onde fui um dos responsáveis pelo front-end. As tasks foram divididas em sprints, utilizamos o asana para projetar as tasks e o projeto foi entregue em 2 meses.',
-    projectTechs: [
-      'Nextjs',
-      'Typescript',
-      'Sass',
-    ],
+    projectTechs: ['Nextjs', 'Typescript', 'Sass'],
     projectImage: [
       '/projeto6/projeto6 (1).png',
       '/projeto6/projeto6 (2).png',

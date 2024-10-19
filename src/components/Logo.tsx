@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const YourComponent = () => {
   return (
@@ -7,7 +7,7 @@ const YourComponent = () => {
         <motion.span
           initial={{ translateX: -30, opacity: 1 }}
           animate={{ translateX: 12 }}
-          transition={{ duration: 1, repeat: 2, repeatType: "reverse" }}
+          transition={{ duration: 1, repeat: 2, repeatType: 'reverse' }}
           className="text-base bg-yellow-400 p-1"
         >
           J
@@ -25,7 +25,7 @@ const YourComponent = () => {
         <motion.span
           initial={{ translateY: -30, opacity: 1 }}
           animate={{ translateY: 0, translateX: 22 }}
-          transition={{ duration: 1, repeat: 2, repeatType: "reverse" }}
+          transition={{ duration: 1, repeat: 2, repeatType: 'reverse' }}
           className="text-base bg-yellow-400 p-1"
         >
           S

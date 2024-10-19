@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
-import { motion } from "framer-motion";
-import { ThemeContext } from "@/context/ThemeProvider";
+'use client';
+import React, { useContext } from 'react';
+import { motion } from 'framer-motion';
+import { ThemeContext } from '@/context/ThemeProvider';
 interface PathProps {
   variants: any;
   transition?: any;
@@ -14,7 +15,7 @@ const Path = (props: PathProps) => {
     <motion.path
       fill="transparent"
       strokeWidth="3"
-      stroke={isDark ? "white" : "black"}
+      stroke={isDark ? 'white' : 'black'}
       strokeLinecap="round"
       {...props}
     />
@@ -28,15 +29,15 @@ export default function MenuToggle({ toggle }: { toggle: () => void }) {
       type="button"
       aria-label="Toggle Menu"
       className={`rounded-full w-8 h-8 sm:flex flex-col justify-center items-center hidden ${
-        isDark ? "bg-gray-600" : "bg-gray-200"
+        isDark ? 'bg-gray-600' : 'bg-gray-200'
       }`}
       onClick={toggle}
     >
       <svg width="16" height="16" viewBox="0 0 20 20">
         <Path
           variants={{
-            closed: { d: "M 2 2.5 L 20 2.5" },
-            open: { d: "M 3 16.5 L 17 2.5" },
+            closed: { d: 'M 2 2.5 L 20 2.5' },
+            open: { d: 'M 3 16.5 L 17 2.5' },
           }}
         />
         <Path
@@ -49,11 +50,11 @@ export default function MenuToggle({ toggle }: { toggle: () => void }) {
         />
         <Path
           variants={{
-            closed: { d: "M 2 16.346 L 20 16.346" },
-            open: { d: "M 3 2.5 L 17 16.346" },
+            closed: { d: 'M 2 16.346 L 20 16.346' },
+            open: { d: 'M 3 2.5 L 17 16.346' },
           }}
         />
       </svg>
     </button>
   );
-};
+}

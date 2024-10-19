@@ -1,7 +1,5 @@
-import React from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { MoveRight } from 'lucide-react';
 import { Carroucel } from './Carroucel';
@@ -39,9 +37,7 @@ export default function ProjectLayout({
           {projectName}
         </h1>
         <h2 className="text-[10px] lg:text-sm flex flex-row items-center gap-3 flex-wrap">
-          {projectTechs?.map((tech) => (
-            <p key={tech}>{tech}</p>
-          ))}
+          {projectTechs?.map((tech) => <p key={tech}>{tech}</p>)}
           <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
         </h2>
         <p className="text-xs text-start max-w-xl lg:text-base">

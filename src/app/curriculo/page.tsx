@@ -57,9 +57,13 @@ export default function Curriculo() {
         width="100%"
         height="100%"
       >
-        <p className='text-base p-10 text-center'>
-          Seu dispositivo não suporta visualização de PDF.<br/>
-          <a href="curriculo/fullstack.pdf" className='bg-gradient-to-r from-orange-500 to-yellow-500 px-2 text-white'>
+        <p className="text-base p-10 text-center">
+          Seu dispositivo não suporta visualização de PDF.
+          <br />
+          <a
+            href="curriculo/fullstack.pdf"
+            className="bg-gradient-to-r from-orange-500 to-yellow-500 px-2 text-white"
+          >
             Clique aqui para baixar o PDF.
           </a>
         </p>

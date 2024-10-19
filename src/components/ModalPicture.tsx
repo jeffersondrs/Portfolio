@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { projetos } from '@/api/data';
@@ -48,7 +49,11 @@ export default function ProjectPage({ onClick }: ModalProps) {
       {modalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <img src={selectedImage} alt={project.projectName} className="w-64 h-full" />
+            <img
+              src={selectedImage}
+              alt={project.projectName}
+              className="w-64 h-full"
+            />
             <button onClick={closeModal}>Fechar</button>
           </div>
         </div>

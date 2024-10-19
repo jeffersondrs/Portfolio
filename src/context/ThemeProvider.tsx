@@ -1,7 +1,6 @@
-"use client"
+'use client';
 
-import { createContext } from "react";
-import { useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 interface ThemeContextProps {
   isDark: boolean;
@@ -20,12 +19,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const toggle = () => setIsDark(!isDark);
 
   return (
-    <ThemeContext.Provider
-      value={{
-        isDark,
-        toggleTheme: toggle,
-      }}
-    >
+    <ThemeContext.Provider value={{ isDark, toggleTheme: toggle }}>
       {children}
     </ThemeContext.Provider>
   );

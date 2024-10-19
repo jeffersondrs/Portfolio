@@ -70,10 +70,11 @@ export default function Home() {
   // }
   return (
     <div className="flex flex-row items-center justify-center gap-2 ">
-      <Link href="/curriculo"
+      <Link
+        href="/curriculo"
         className="w-40 flex flex-row items-center justify-center bg-gradient-to-r from-orange-400 to-yellow-600 hover:from-orange-500 hover:to-yellow-700 text-white text-center p-2 transition-all duration-300 ease-in-out "
       >
-       Visualize ou baixe meu curriculo
+        Visualize ou baixe meu curriculo
       </Link>
       {/* <button
         onClick={downloadCurriculoPortugues}

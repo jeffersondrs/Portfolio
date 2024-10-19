@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -27,7 +28,9 @@ export default function LoadingBar() {
       ) : (
         <div className="flex flex-col items-center">
           <h1 className="text-2xl font-bold text-gray-700">Obrigado!</h1>
-          <p className="text-gray-500">Seu conteúdo foi carregado com sucesso.</p>
+          <p className="text-gray-500">
+            Seu conteúdo foi carregado com sucesso.
+          </p>
         </div>
       )}
     </div>

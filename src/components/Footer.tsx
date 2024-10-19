@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { Github, Linkedin } from 'lucide-react';
 import { ThemeContext } from '@/context/ThemeProvider';
@@ -39,7 +38,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col justify-center items-center md:flex-row gap-3">
         <p className="tracking-wider">
-          Feito com <span className="text-red-500">❤️</span> por {' '}
+          Feito com <span className="text-red-500">❤️</span> por{' '}
           <Link
             className="text-blue-500 hover:text-blue-700 transition-all duration-200 ease-in-out"
             href="
@@ -48,9 +47,8 @@ export default function Footer() {
             Jefferson Santos
           </Link>
         </p>
-      
       </div>
-      <div className='py-2'>
+      <div className="py-2">
         <p className="text-sm sm:text-xs text-gray-500">
           © Copyrigth {new Date().getFullYear()} - Todos os direitos reservados
         </p>
