@@ -6,12 +6,12 @@ export default function SectionProjets() {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-5">
-        <h1 className="text-xl font-bold">Meus Projetos</h1>
-        <p className="text-xs text-center max-w-md">
+        <h1 className="text-xl font-bold">Meus Projetos até aqui...</h1>
+        <p className="text-sm text-center max-w-md">
           Aqui estão alguns projetos que desenvolvi ou participei.
         </p>
       </div>
-      <div className="grid grid-cols-2 py-10 gap-10">
+      <div className="grid grid-cols-1 py-5 gap-5 md:grid-cols-2">
         {projetos.map((projeto) => (
           <ProjectLayout
             key={projeto.projectId}

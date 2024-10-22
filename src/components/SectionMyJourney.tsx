@@ -4,7 +4,10 @@ import Image from 'next/image';
 export default function SectionMyJourney() {
   return (
     <section className="flex flex-col items-center justify-center w-full h-full py-10">
-      <h1 className="text-xl font-bold mb-8">Minha jornada</h1>
+      <h1 className="text-xl font-bold mb-4">Minha jornada começou...</h1>
+      <p className="text-sm text-center max-w-lg mb-4">
+        Alguns momentos importantes da minha jornada, e como tudo começou.
+      </p>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical w-full max-w-4xl">
         {myJourney.map((item, index) => (
           <li key={index} className="-mb-2">
@@ -31,10 +34,10 @@ export default function SectionMyJourney() {
               <Image
                 src={item.image}
                 alt={`Imagem de ${item.date}`}
-                width={300}
-                height={150}
+                width={500}
+                height={300}
                 layout="responsive"
-                className="mt-4 rounded-lg shadow object-contain filter grayscale"
+                className="shadow object-cover filter mt-2 w-full h-full"
               />
             </div>
             <hr />

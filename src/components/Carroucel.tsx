@@ -5,6 +5,7 @@ import { useState, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 import { ThemeContext } from '@/context/ThemeProvider';
+import { ChevronLeft, ChevronRight, ChevronLeftCircle } from 'lucide-react';
 
 const variants = {
   enter: (direction: number) => {
@@ -47,7 +48,7 @@ export const Carroucel = ({ images }: CaroucelProps) => {
   };
 
   return (
-    <div className="w-full min-w-fit h-80 relative flex justify-center items-center ">
+    <div className="w-full min-w-fit h-60 relative flex justify-center items-center ">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}
@@ -76,7 +77,7 @@ export const Carroucel = ({ images }: CaroucelProps) => {
         >
           <img
             src={images[imageIndex]}
-            className="w-full h-full object-cover "
+            className="w-full h-full object-cover"
             alt="Imagem do projeto"
           />
         </motion.div>
@@ -85,20 +86,19 @@ export const Carroucel = ({ images }: CaroucelProps) => {
       <div
         className={`
         ${isDark ? 'bg-black text-white' : 'bg-white text-black'}
-        absolute rounded-3xl w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-10 right-2
+        absolute rounded-full w-6 h-6 shadow-lg border border-gray-100 flex justify-center items-center select-none cursor-pointer font-bold text-sm z-10 right-1
         `}
         onClick={() => paginate(1)}
       >
-        {'‣'}
+        <ChevronRight size={10} />
       </div>
       <div
         className={`
         ${isDark ? 'bg-black text-white' : 'bg-white text-black'}
-        absolute rounded-3xl w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold text-lg z-10 left-2 -scale-100
-        `}
+        absolute rounded-full w-6 h-6 shadow-lg border border-gray-100 flex justify-center items-center select-none cursor-pointer font-bold text-sm z-10 left-1`}
         onClick={() => paginate(-1)}
       >
-        {'‣'}
+        <ChevronLeft size={10} />
       </div>
     </div>
   );

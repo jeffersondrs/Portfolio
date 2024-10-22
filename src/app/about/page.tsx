@@ -38,7 +38,7 @@ export default function AboutPage() {
             alt="Toca Hobbit"
             width={1920}
             height={1080}
-            className="z-40 w-64 translate-x-10 rounded-lg"
+            className="z-20 w-44 translate-x-10 rounded-lg"
           />
         ))}
         <motion.img
@@ -54,7 +54,7 @@ export default function AboutPage() {
           alt="Jefferson Santos"
           width={1920}
           height={1080}
-          className="z-50 w-72 rounded-lg translate-x-8"
+          className="z-30 w-52 rounded-lg translate-x-8"
         />
         <motion.img
           ref={ref}
@@ -65,7 +65,7 @@ export default function AboutPage() {
             stiffness: 30,
             restDelta: 0.001,
           }}
-          className="w-64 z-40 rounded-lg"
+          className="w-44 z-20 rounded-lg"
           src="/myfriend.jpg"
           alt="Ozzy"
           width={1920}
@@ -73,14 +73,11 @@ export default function AboutPage() {
         />
       </div>
       <div className=" indent-2 flex flex-col justify-center items-center max-w-2xl p-5 py-5 gap-5">
-        <h1 className="text-4xl sm:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500 tracking-wider">
+        <h1 className="text-2xl sm:text-lg font-semibold tracking-wider">
           Olá novamente, sou o Jefferson
         </h1>
-        <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
-            isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
-          }`}
-        >
+        <p className="font-medium text-sm">
+
           <MapPin
             size={24}
             className="text-gray-500 absolute -translate-x-10 sm:-translate-x-6"
@@ -91,11 +88,8 @@ export default function AboutPage() {
           de Almeida. Pretendo cursar pós-graduação em Engenharia de Software ou
           Ciência da Computação.
         </p>
-        <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
-            isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
-          }`}
-        >
+        <p className="font-medium text-sm">
+
           <Dog
             size={24}
             className="text-red-700 absolute -translate-x-10 sm:-translate-x-6"
@@ -106,11 +100,8 @@ export default function AboutPage() {
           pequena homenagem a ele.
           <span className="text-red-500">❤️</span>
         </p>
-        <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
-            isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
-          }`}
-        >
+        <p className="font-medium text-sm">
+
           <Swords
             size={24}
             className="text-sky-700 absolute -translate-x-10 sm:-translate-x-6"
@@ -123,11 +114,8 @@ export default function AboutPage() {
           Typescript e poder contribuir para o crescimento da comunidade de
           desenvolvedores.
         </p>
-        <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
-            isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
-          }`}
-        >
+        <p className="font-medium text-sm">
+
           <Home
             size={24}
             className="text-green-700 absolute -translate-x-10 sm:-translate-x-6"
@@ -138,11 +126,7 @@ export default function AboutPage() {
           de um dia ter minha própria toca de hobbit. Um lugar para chamar de
           meu. Um lugar para chamar de lar.
         </p>
-        <p
-          className={`bg-clip-text bg-gradient-to-b text-transparent font-bold sm:text-sm ${
-            isDark ? 'from-gray-100 to-gray-300' : 'from-slate-700 to-gray-950'
-          }`}
-        >
+        <p className="font-medium text-sm">
           <Gamepad2
             size={24}
             className="text-yellow-700 absolute -translate-x-10 sm:-translate-x-6"
@@ -153,17 +137,10 @@ export default function AboutPage() {
           Meu personagem favorito é o Darth Vader. Meu filme favorito é O Senhor
           dos Anéis: O Retorno do Rei. Meu livro favorito é O Silmarillion.
         </p>
-        <div className="flex flex-col justify-center items-center">
-          <Link
-            className="text-orange-500 hover:text-orange-700"
-            href="/contact"
-          >
-            Entre em contato comigo
-          </Link>
-
-          {/* <Link className="text-blue-500 hover:text-blue-700" href="/projects">
-            Veja meus projetos
-          </Link> */}
+        <div className="flex flex-col justify-center items-center bg-gray-500">
+          <p className="text-white font-semibold text-sm p-2">
+            <Link href="/contact">Entre em contato comigo</Link>
+          </p>
         </div>
       </div>
       <Curriculo />

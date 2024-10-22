@@ -54,10 +54,11 @@ export default function FormContact() {
       <div className="flex flex-col justify-center items-center gap-3">
         <ThankYouSubmit name={formmulary.name} />
         <button
+          type="button"
           onClick={() => {
             window.location.reload();
           }}
-          className="flex flex-row items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg"
+          className="flex flex-row items-center justify-center gap-2 font-bold py-2 px-4 rounded-lg"
         >
           Enviar Novamente!
         </button>
@@ -68,7 +69,7 @@ export default function FormContact() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r rounded-2xl shadow-xl from-orange-500 to-yellow-500"
+      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r rounded-2xl shadow-xl bg-black"
     >
       <h1 className="text-xl sm:text-2xl font-bold text-center text-white">
         Entre em contato comigo!
@@ -153,7 +154,7 @@ export default function FormContact() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-48 h-12 px-5 rounded-lg bg-orange-600
+        className="w-48 h-12 px-5 rounded-lg bg-gray-500
              transition-all duration-300 ease-in-out text-white
             shadow-lg hover:shadow-xl font-bold text-lg sm:text-base
           "
