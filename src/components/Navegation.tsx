@@ -22,7 +22,7 @@ export default function Navegation({ children }: NavegationProps) {
         transition={{ duration: 0.5 }}
         className={`
       ${isDark ? 'bg-gray-950 text-white' : 'bg-gray-100 text-black'}
-      flex items-center px-1 justify-between drop-shadow-sm w-full h-24 max-w-[100rem]`}
+      flex items-center px-1 justify-between drop-shadow-sm w-full h-20 max-w-[100rem]`}
       >
         <Link href="/">
           <Logo />

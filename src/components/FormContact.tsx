@@ -69,20 +69,20 @@ export default function FormContact() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r rounded-2xl shadow-xl bg-black"
+      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r shadow-xl bg-gray-800"
     >
-      <h1 className="text-xl sm:text-2xl font-bold text-center text-white">
+      <h1 className="text-xl font-mono text-center text-white">
         Entre em contato comigo!
       </h1>
-      <div className="flex flex-row w-full gap-3">
+      <div className="flex flex-col w-full gap-3 md:flex-row">
         <div className="flex flex-col justify-center items-end w-full">
           <input
             type="text"
             placeholder="Nome"
-            className={`w-80 sm:w-full  py-2 px-3 rounded-lg
+            className={`w-full py-2 px-3
             focus:outline-none
-            text-xs md:text-base focus:ring-2 focus:ring-gray-200 focus:border-transparent
-          ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
+            text-xs focus:ring-2 focus:ring-gray-200
+          ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}
             {...register('name', { required: true })}
             onChange={(e) => {
               setFormmulary({ ...formmulary, name: e.target.value });
@@ -94,7 +94,7 @@ export default function FormContact() {
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-red-500 absolute text-[10px] md:text-xs pr-2"
+              className="text-red-500 absolute text-xs pr-2"
             >
               Nome é obrigatório
             </motion.span>
@@ -104,10 +104,10 @@ export default function FormContact() {
           <input
             type="email"
             placeholder="E-mail"
-            className={`w-96 sm:w-full py-2 px-3 rounded-lg
-          focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent
-            text-xs md:text-base
-           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
+            className={`w-full py-2 px-3
+          focus:outline-none focus:ring-2 focus:ring-gray-200
+            text-xs
+           ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}
             {...register('email', { required: true })}
             onChange={(e) => {
               setFormmulary({ ...formmulary, email: e.target.value });
@@ -119,7 +119,7 @@ export default function FormContact() {
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-red-500 absolute text-[10px] md:text-xs pr-2"
+              className="text-red-500 absolute text-xs pr-2"
             >
               E-mail é obrigatório
             </motion.span>
@@ -129,10 +129,10 @@ export default function FormContact() {
       <div className="flex flex-col relative w-full">
         <textarea
           placeholder="Mensagem"
-          className={`w-full h-40 p-3 rounded-lg
+          className={`w-full h-40 p-3
           focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent
-          text-xs md:text-base
-          ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}
+          text-xs
+          ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}
           {...register('message', { required: true })}
           onChange={(e) => {
             setFormmulary({ ...formmulary, message: e.target.value });
@@ -154,9 +154,9 @@ export default function FormContact() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-48 h-12 px-5 rounded-lg bg-gray-500
+        className="w-36 h-12 px-2  bg-gray-500
              transition-all duration-300 ease-in-out text-white
-            shadow-lg hover:shadow-xl font-bold text-lg sm:text-base
+            shadow-lg hover:shadow-xl font-mono text-lg sm:text-base
           "
       >
         Enviar

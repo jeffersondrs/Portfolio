@@ -77,7 +77,6 @@ export default function AboutPage() {
           Olá novamente, sou o Jefferson
         </h1>
         <p className="font-medium text-sm">
-
           <MapPin
             size={24}
             className="text-gray-500 absolute -translate-x-10 sm:-translate-x-6"
@@ -89,7 +88,6 @@ export default function AboutPage() {
           Ciência da Computação.
         </p>
         <p className="font-medium text-sm">
-
           <Dog
             size={24}
             className="text-red-700 absolute -translate-x-10 sm:-translate-x-6"
@@ -101,7 +99,6 @@ export default function AboutPage() {
           <span className="text-red-500">❤️</span>
         </p>
         <p className="font-medium text-sm">
-
           <Swords
             size={24}
             className="text-sky-700 absolute -translate-x-10 sm:-translate-x-6"
@@ -115,7 +112,6 @@ export default function AboutPage() {
           desenvolvedores.
         </p>
         <p className="font-medium text-sm">
-
           <Home
             size={24}
             className="text-green-700 absolute -translate-x-10 sm:-translate-x-6"

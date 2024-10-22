@@ -8,7 +8,7 @@ export default function Hello() {
         Olá, eu sou o Jefferson, seja bem-vindo ao meu portfólio!
         <br />
         <span className="flex flex-row justify-start items-center gap-2">
-          <MapPinCheck size={16} /> Rio de Janeiro, Brasil
+          Rio de Janeiro, Brasil <MapPinCheck size={16} color='#ff0000' /> 
         </span>
         Desenvolvedor web entusiasta e sonhador, pronto para criar soluções
         inovadoras e contribuir para o futuro digital.

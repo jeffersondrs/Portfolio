@@ -24,7 +24,7 @@ export default function Menu() {
     <motion.div
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
-      className="flex flex-col translate-y-14 left-0 right-0 justify-center  items-center display-none md:hidden z-50"
+      className="flex flex-col translate-y-20 left-0 right-0 justify-center  items-center display-none md:hidden z-50 absolute"
     >
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <motion.ul
@@ -49,16 +49,14 @@ export default function Menu() {
           },
         }}
         style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
-        className={`flex flex-col gap-2 p-1 rounded-md shadow-md w-40 ${
-          isOpen ? 'bg-gray-200' : 'bg-gray-100'
-        }
-          ${isDark ? 'bg-gray-900' : 'bg-gray-100'}
+        className={`flex flex-col  p-2 shadow-lg border border-gray-100 rounded-none
+          ${isDark ? 'bg-gray-900 border-none' : 'bg-gray-100 '}
         `}
       >
         <Link href={'/'}>
           <motion.li
             className={`
-            p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+            p-2 rounded-t-md hover:cursor-pointer flex flex-row items-center justify-between gap-6 ${
               isDark
                 ? 'text-white hover:bg-gray-700'
                 : 'text-black hover:bg-gray-400'
@@ -66,36 +64,35 @@ export default function Menu() {
              `}
             variants={itemVariants}
           >
+            <p className="font-mono tracking-widest">Home</p>
             <HomeIcon className="w-3 h-3" />
-            Home
           </motion.li>
         </Link>
         <Link href={'/about'}>
           <motion.li
-            className={`
-             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
-               isDark
-                 ? 'text-white hover:bg-gray-700'
-                 : 'text-black hover:bg-gray-400'
-             }            `}
+            className={`p-2 hover:cursor-pointer flex flex-row items-center justify-between gap-6 ${
+              isDark
+                ? 'text-white hover:bg-gray-700'
+                : 'text-black hover:bg-gray-400'
+            }            `}
             variants={itemVariants}
           >
+            <p className="font-mono tracking-widest">Sobre</p>
             <User2 className="w-3 h-3" />
-            Sobre
           </motion.li>
         </Link>
         <Link href={'/contact'}>
           <motion.li
             className={`
-             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+             p-2 hover:cursor-pointer flex flex-row items-center justify-between gap-6 ${
                isDark
                  ? 'text-white hover:bg-gray-700'
                  : 'text-black hover:bg-gray-400'
              }            `}
             variants={itemVariants}
           >
+            <p className="font-mono tracking-widest">Contato</p>
             <MessageSquare className="w-3 h-3" />
-            Contato
           </motion.li>
         </Link>
         <Link
@@ -107,15 +104,15 @@ export default function Menu() {
           {' '}
           <motion.li
             className={`
-             p-1 rounded-md hover:cursor-pointer flex flex-row items-center justify-start gap-2 ${
+             p-2 rounded-b-md hover:cursor-pointer flex flex-row items-center justify-between gap-6 ${
                isDark
                  ? 'text-white hover:bg-gray-700'
                  : 'text-black hover:bg-gray-400'
              }            `}
             variants={itemVariants}
           >
+            <p className="font-mono tracking-widest">Blog</p>
             <FileCode2 className="w-3 h-3" />
-            Blog
           </motion.li>
         </Link>
       </motion.ul>

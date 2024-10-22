@@ -38,9 +38,7 @@ export default function ProjectLayout({
         <p className="text-xs text-start max-w-xl">
           {projectDescription || 'Descrição'}
         </p>
-        <div
-          className="w-full flex flex-col justify-start items-center"
-        >
+        <div className="w-full flex flex-col justify-start items-center">
           <Link
             href={`/projetos/${projectId}`}
             className="flex flex-row justify-between items-center bg-gray-700 hover:bg-gray-800  text-white py-3 px-5 transition-all gap-3 hover:gap-5 duration-500 ease-in-out shadow-md"
