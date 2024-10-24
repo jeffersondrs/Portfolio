@@ -52,14 +52,16 @@ export default function ProjectPage() {
       </div>
       <div className="flex flex-row flex-wrap gap-5 items-start justify-center relative">
         {project.projectImage.map((image) => (
-          <Image
-            src={image}
-            alt={project.projectName}
-            width={300}
-            height={400}
-            className="h-full hover:scale-125 transition duration-150 ease-in-out shadow-lg border-2 border-gray-200 rounded-md"
-            key={image}
-          />
+          <Link href={image} key={image} target='_blank'>
+            <Image
+              src={image}
+              alt={project.projectName}
+              width={600}
+              height={400}
+              className="h-full hover:scale-105 transition duration-150 ease-in-out shadow-lg border-2 border-gray-200 rounded-md"
+              key={image}
+            />
+          </Link>
         ))}
       </div>
     </section>

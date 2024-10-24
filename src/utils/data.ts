@@ -1,13 +1,5 @@
 import { JourneyProps, ProjectLayoutProps } from '@/types/global-types';
 
-export const projectImages = [
-  'https://projectImages.unsplash.com/photo-1540273777513-7c4973aa2cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  'https://projectImages.unsplash.com/photo-1687274999959-dd29003bfa17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  'https://projectImages.unsplash.com/photo-1687800132770-8f1600a5849e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80',
-  'https://projectImages.unsplash.com/photo-1687709834461-85009675e422?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-  'https://projectImages.unsplash.com/photo-1687507318101-225772a6e2aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  'https://projectImages.unsplash.com/photo-1687507593516-abd148e0bac9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-];
 export const aboutMe = [
   'https://projectImages.unsplash.com/photo-1600071075057-fc3fb218e6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
 ];
@@ -15,7 +7,22 @@ export const aboutMe = [
 export const projetos: ProjectLayoutProps[] = [
   {
     projectId: 1,
-    projectName: 'Web Ecommerce',
+    projectName: 'Agendamento MVP',
+    projectTechs: ['Nextjs', 'Typescript', 'TailWindCss', 'MUI', 'dayjs', 'Mobx'],
+    projectDescription:
+      'Projeto desenvolvido com Nextjs, Typescript, TailWindCss, MUI, dayjs, Mobx, dentre outras tecnologias. O projeto é um MVP de um sistema de agendamento de serviços, onde o cliente pode escolher o serviço, o profissional, a data e o horário. O projeto está em constante atualização, com novas funcionalidades e melhorias no código.',
+    projectImage: [
+      'https://raw.githubusercontent.com/jeffersondrs/schedule-app/refs/heads/main/public/prints/Prints%20(1).png',
+      'https://raw.githubusercontent.com/jeffersondrs/schedule-app/refs/heads/main/public/prints/Prints%20(2).png',
+      'https://raw.githubusercontent.com/jeffersondrs/schedule-app/refs/heads/main/public/prints/Prints%20(3).png',
+      'https://raw.githubusercontent.com/jeffersondrs/schedule-app/refs/heads/main/public/prints/Prints%20(4).png',
+    ],
+    projectLink: 'https://github.com/jeffersondrs/schedule-app',
+    projectLive: 'https://schedule-day.vercel.app/',
+  },
+  {
+    projectId: 2,
+    projectName: 'Web E-commerce',
     projectTechs: ['Nextjs', 'Typescript', 'TailWindCss'],
     projectDescription:
       'Lading Page Criada com React, Vite, Typescript Dependencias: React-router-dom, react-icons, TailWindCss, Styled-Component, Sass, dentre outras que irei adicionando conforme for necessário.',
@@ -29,7 +36,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://web-ecommerce-eta.vercel.app/',
   },
   {
-    projectId: 2,
+    projectId: 3,
     projectName: 'Blog Pessoal',
 
     projectDescription:
@@ -44,7 +51,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://jeffersondrsblog.vercel.app/',
   },
   {
-    projectId: 3,
+    projectId: 4,
     projectName: 'Barbearia Shop/Blog',
     projectDescription:
       'Projeto desenvolvido para juntar e-commerce, agendamento, contato de clientes, blog e institucional da empresa.',
@@ -58,7 +65,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://barberariablogshop.vercel.app/',
   },
   {
-    projectId: 4,
+    projectId: 5,
     projectName: 'Note Check',
 
     projectDescription:
@@ -80,7 +87,7 @@ export const projetos: ProjectLayoutProps[] = [
       'https://play.google.com/store/apps/details?id=com.jeffersondrs.tarefascertas',
   },
   {
-    projectId: 5,
+    projectId: 6,
     projectName: 'Agency Tech',
 
     projectDescription:
@@ -103,7 +110,7 @@ export const projetos: ProjectLayoutProps[] = [
     projectLive: 'https://agency-tech.vercel.app/',
   },
   {
-    projectId: 6,
+    projectId: 7,
     projectName: 'Analítica',
 
     projectDescription:
