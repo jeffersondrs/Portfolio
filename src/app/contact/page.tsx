@@ -3,7 +3,7 @@
 import React from 'react';
 import { ThemeContext } from '@/context/ThemeProvider';
 import { useContext } from 'react';
-import { Contact, Curriculo } from '@/components/index';
+import { Contact, CurriculoButton } from '@/components/index';
 
 export default function ContactPage() {
   const { isDark } = useContext(ThemeContext);
@@ -15,7 +15,7 @@ export default function ContactPage() {
     >
       <Contact />
       <div className="pt-10">
-        <Curriculo />
+        <CurriculoButton />
       </div>
     </section>
   );

@@ -26,7 +26,10 @@ export default function SectionMyJourney() {
               </svg>
             </div>
             <div
-              className={`timeline-${index % 2 === 0 ? 'start' : 'end'} mb-10`}
+              className={`timeline-${index % 2 === 0 ? 'start' : 'end'} mb-10 flex flex-col
+              items-${index % 2 === 0 ? 'end' : 'start'}
+               justify-center w-full max-w-4xl gap-2 px-4 py-2
+                `}
             >
               <time className="font-mono italic">{item.date}</time>
               <div className="text-lg font-black mb-2">{item.title}</div>
@@ -35,7 +38,7 @@ export default function SectionMyJourney() {
                 src={item.image}
                 alt={`Imagem de ${item.date}`}
                 width={500}
-                height={300}
+                height={500}
                 layout="responsive"
                 className="shadow object-cover filter mt-2 w-full h-full"
               />

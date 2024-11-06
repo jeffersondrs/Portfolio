@@ -69,9 +69,9 @@ export default function FormContact() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r shadow-xl bg-gray-800"
+      className="flex flex-col items-center justify-center max-w-2xl w-full p-10 sm:p-5 h-full gap-5 bg-gradient-to-r shadow-xl bg-gray-500"
     >
-      <h1 className="text-xl font-mono text-center text-white">
+      <h1 className="text-lg font-mono text-center text-white">
         Entre em contato comigo!
       </h1>
       <div className="flex flex-col w-full gap-3 md:flex-row">
@@ -151,13 +151,10 @@ export default function FormContact() {
         )}
       </div>
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-36 h-12 px-2  bg-gray-500
-             transition-all duration-300 ease-in-out text-white
-            shadow-lg hover:shadow-xl font-mono text-lg sm:text-base
-          "
+        className="bg-gray-600 px-4 py-2 transition-all duration-300 ease-in-out text-white shadow-md font-mono text-sm"
       >
         Enviar
       </motion.button>

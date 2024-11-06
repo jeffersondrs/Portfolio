@@ -3,21 +3,21 @@
 import { useState } from 'react';
 
 export default function Curriculo() {
-  const [typeCurriculo, setTypeCurriculo] = useState('fullstack');
+  const [typeCurriculo, setTypeCurriculo] = useState('Curriculo Full Stack1');
 
   const chooseTypeCurriculo = (type: string) => {
     setTypeCurriculo(type);
   };
 
   return (
-    <div className="flex justify-center items-center h-[40rem] flex-col py-3">
-      <div className="w-full h-28 flex flex-row justify-center items-center flex-wrap gap-3">
+    <div className="flex justify-center items-center flex-col p-4 w-full">
+      <div className="w-full h-20 flex flex-row justify-center items-center flex-wrap gap-3">
         <button
           type="button"
           onClick={() => {
-            chooseTypeCurriculo('fullstack');
+            chooseTypeCurriculo('Curriculo Full Stack1');
           }}
-          className="w-40 flex flex-row items-center text-sm justify-center bg-gray-700 text-white
+          className="flex flex-row items-center text-xs justify-center bg-gray-700 text-white
                font-mono py-2 px-4 transition-all duration-300 ease-in-out"
         >
           Fullstack
@@ -27,7 +27,7 @@ export default function Curriculo() {
           onClick={() => {
             chooseTypeCurriculo('frontend');
           }}
-          className="w-40 flex flex-row items-center text-sm justify-center bg-gray-700 text-white
+          className="flex flex-row items-center text-xs justify-center bg-gray-700 text-white
                font-mono py-2 px-4 transition-all duration-300 ease-in-out"
         >
           Front-end
@@ -35,9 +35,9 @@ export default function Curriculo() {
         <button
           type="button"
           onClick={() => {
-            chooseTypeCurriculo('backend');
+            chooseTypeCurriculo('Curriculo Back end');
           }}
-          className="w-40 flex flex-row items-center text-sm justify-center bg-gray-700 text-white
+          className="flex flex-row items-center text-xs justify-center bg-gray-700 text-white
                font-mono py-2 px-4 transition-all duration-300 ease-in-out"
         >
           Back-end
@@ -47,27 +47,29 @@ export default function Curriculo() {
           onClick={() => {
             chooseTypeCurriculo('english');
           }}
-          className="w-40 flex flex-row items-center text-sm justify-center bg-gray-700 text-white
+          className="flex flex-row items-center text-xs justify-center bg-gray-700 text-white
                font-mono py-2 px-4 transition-all duration-300 ease-in-out"
         >
           English
         </button>
       </div>
-      <object
-        data={`curriculo/${typeCurriculo}.pdf
+      <div className="w-full h-screen">
+        <object
+          data={`curriculo/${typeCurriculo}.pdf
           `}
-        type="application/pdf"
-        width="100%"
-        height="100%"
-      >
-        <p className="text-base p-10 text-center">
-          Seu dispositivo não suporta visualização de PDF.
-          <br />
-          <a href="curriculo/fullstack.pdf" className="">
-            Clique aqui para baixar o PDF.
-          </a>
-        </p>
-      </object>
+          type="application/pdf"
+          width="100%"
+          height="100%"
+        >
+          <p className="text-xs p-10 text-center">
+            Seu dispositivo não suporta visualização de PDF.
+            <br />
+            <a href="curriculo/fullstack.pdf">
+              Clique aqui para baixar o PDF.
+            </a>
+          </p>
+        </object>
+      </div>
     </div>
   );
 }

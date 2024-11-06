@@ -10,7 +10,7 @@ import MenuToggle from './MenuToggle';
 import ModalPicture from './ModalPicture';
 import Scrolling from './Scrolling';
 import { Carroucel } from './Carroucel';
-import Curriculo from './Curriculo';
+import CurriculoButton from './CurriculoButton';
 import ThankYouSubmit from './ThankyouSubmit';
 import ToggoeButton from './ToggleButton';
 import SectionMyJourney from './SectionMyJourney';
@@ -29,7 +29,7 @@ export {
   ModalPicture,
   Scrolling,
   Carroucel,
-  Curriculo,
+  CurriculoButton,
   ThankYouSubmit,
   ToggoeButton,
   SectionMyJourney,
