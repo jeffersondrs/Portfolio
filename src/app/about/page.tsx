@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useFollowPointer } from '@/hooks/useFollowPointer';
 import { Dog, Gamepad2, Home, MapPin, Swords } from 'lucide-react';
-import { Curriculo } from '@/components/index';
+import { CurriculoButton } from '@/components/index';
 
 export default function AboutPage() {
   const { isDark } = useContext(ThemeContext);
@@ -139,7 +139,7 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <Curriculo />
+      <CurriculoButton />
     </section>
   );
 }
