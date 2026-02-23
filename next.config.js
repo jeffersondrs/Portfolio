@@ -7,6 +7,7 @@ const nextConfig = {
       'firebasestorage.googleapis.com',
       'play-lh.googleusercontent.com',
       'images.unsplash.com',
+      'projectimages.unsplash.com',
     ],
   },
 };

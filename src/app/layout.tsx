@@ -1,49 +1,13 @@
-import { Navegation, Footer } from '@/components/index';
 import './globals.css';
-import { Poppins } from 'next/font/google';
-import { ThemeProvider } from '@/context/ThemeProvider';
 import { Metadata } from 'next';
+import { ThemeProvider } from '@/context/ThemeProvider';
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Jefferson Santos',
-  description: 'Web Site Pessoal, desenvolvido com Nextjs ❤️',
-  creator: 'Jefferson Santos',
-  keywords: [
-    'Nextjs',
-    'React',
-    'Tailwindcss',
-    'TypeScript',
-    'SEO',
-    'Jefferson Santos',
-    'Web Site Pessoal',
-    'Web Site',
-    'Pessoal',
-  ],
-  icons: [
-    {
-      href: '/favicon-16x16.ico',
-      rel: 'icon',
-      type: 'image/x-icon',
-      url: '/favicon.ico',
-    },
-    {
-      href: '/favicon-32x32.ico',
-      rel: 'shortcut icon',
-      type: 'image/x-icon',
-      url: '/favicon.ico',
-    },
-  ],
-  robots: {
-    googleBot: 'index, follow',
-    'max-snippet': 50,
-    'max-image-preview': 'large',
-  },
+  title: 'Jefferson Santos - Portfólio',
+  description: 'Portfólio profissional desenvolvido com Next.js 14',
 };
-
-const poppins = Poppins({
-  subsets: ['latin-ext'],
-  weight: '400',
-});
 
 export default function RootLayout({
   children,
@@ -51,12 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.className} flex flex-col justify-center items-center`}
-      >
+    <html lang="pt-BR">
+      <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950">
         <ThemeProvider>
-          <Navegation>{children}</Navegation>
+          <Navbar />
+          <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
