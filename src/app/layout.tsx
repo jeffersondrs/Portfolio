@@ -1,8 +1,7 @@
 import './globals.css';
 import { Metadata } from 'next';
-import { ThemeProvider } from '@/context/ThemeProvider';
-import Navbar from '@/components/ui/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '../components/ui/Navbar';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: 'Jefferson Santos - Portfólio',
@@ -16,12 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950">
-        <ThemeProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </ThemeProvider>
+      <body className="min-h-screen flex flex-col w-full">
+        <Navbar />
+        <main className="flex-1 w-full">{children}</main>
+        <Footer />
       </body>
     </html>
   );

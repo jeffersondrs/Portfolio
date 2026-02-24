@@ -1,74 +1,113 @@
-import React from 'react';
-import { notFound } from 'next/navigation';
-import Container from '@/components/ui/Container';
-import Section from '@/components/ui/Section';
-import { projetos } from '@/utils/data';
-import { Carroucel } from '@/components/Carroucel';
+import React from "react";
+import { notFound } from "next/navigation";
+import Container from "../../../components/ui/Container";
+import { projetos } from "../../../utils/data";
+import { Carroucel } from "../../../components/Carroucel";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectPageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
-/**
- * Dynamic project detail page.
- */
-export default function ProjectDetailPage({ params }: ProjectPageProps) {
-  const id = Number(params.id);
-  const project = projetos.find((p) => p.projectId === id);
+export default async function ProjectDetailPage({ params }: ProjectPageProps) {
+  const { id } = await params;
+  const project = projetos.find((p) => p.projectId === Number(id));
 
-  if (!project) {
-    // If the project does not exist, return 404
-    return notFound();
-  }
+  if (!project) return notFound();
 
   return (
     <Container>
-      <Section
-        title={project.projectName}
-        subtitle={project.projectDescription}
-        className="pt-12"
-      >
-        <div className="mb-6">
-          <div className="mb-4">
+      <div className="flex flex-col gap-8 py-10 fade-in">
+        <Button
+          variant="ghost"
+          size="sm"
+          asChild
+          className="w-fit text-(--color-text-muted) hover:text-zinc-50 -ml-2"
+        >
+          <Link href="/projetos">
+            <ArrowLeft size={14} className="mr-1" />
+            Voltar aos projetos
+          </Link>
+        </Button>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="w-full rounded-lg overflow-hidden">
             <Carroucel images={project.projectImage} />
           </div>
-          <h3 className="mb-2 text-base font-semibold">Tecnologias:</h3>
-          <ul className="mb-6 flex flex-wrap gap-2 text-sm">
-            {project.projectTechs.map((tech) => (
-              <li
-                key={tech}
-                className="rounded bg-gray-200 px-2 py-1 dark:bg-gray-700 dark:text-gray-300"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-row gap-4">
-            {project.projectLink && (
-              <a
-                href={project.projectLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600"
-              >
-                Ver Código
-              </a>
-            )}
-            {project.projectLive && (
-              <a
-                href={project.projectLive}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-              >
-                Ver Demo
-              </a>
-            )}
+
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <h1 className="text-2xl sm:text-3xl font-bold text-gradient">
+                {project.projectName}
+              </h1>
+              <p className="text-sm sm:text-base text-(--color-text-secondary) leading-relaxed">
+                {project.projectDescription}
+              </p>
+            </div>
+
+            <div className="divider" />
+
+            <div className="flex flex-col gap-3">
+              <h3 className="text-xs font-semibold text-(--color-text-muted) uppercase tracking-widest">
+                Tecnologias
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {project.projectTechs.map((tech) => (
+                  <Badge
+                    key={tech}
+                    variant="outline"
+                    className="text-(--color-text-muted) border-(--color-border-subtle) bg-(--color-surface-elevated)"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            <div className="divider" />
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              {project.projectLink && (
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  asChild
+                  className="w-full sm:w-auto"
+                >
+                  <a
+                    href={project.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={14} className="mr-2" />
+                    Ver Código
+                  </a>
+                </Button>
+              )}
+              {project.projectLive && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="w-full sm:w-auto"
+                >
+                  <a
+                    href={project.projectLive}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={14} className="mr-2" />
+                    Ver Demo
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
-      </Section>
+      </div>
     </Container>
   );
 }

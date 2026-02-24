@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Badge } from './badge';
+import { Button } from './button';
 
 export interface CardProps {
   id: number;
@@ -11,10 +14,6 @@ export interface CardProps {
   live: string;
 }
 
-/**
- * Displays a single project summary with an image, title, description, technologies and links.
- * This card is used on the projects listing page.
- */
 export default function Card({
   id,
   title,
@@ -25,51 +24,54 @@ export default function Card({
   live,
 }: CardProps) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-[101%] dark:bg-gray-800 dark:text-gray-50">
-      <img
-        src={image}
-        alt={`Imagem do projeto ${title}`}
-        className="h-48 w-full object-cover"
-      />
-      <div className="flex grow flex-col p-4">
-        <h3 className="mb-2 text-lg font-semibold">{title}</h3>
-        <p className="mb-4 flex-grow text-sm">{description}</p>
-        <div className="mb-4 flex flex-wrap gap-2 text-xs">
+    <div className="surface hover-glow flex flex-col overflow-hidden rounded-lg transition-transform duration-(--duration-base) hover:scale-[101%]">
+      <div className="relative h-48 w-full">
+        <Image
+          src={image}
+          alt={`Imagem do projeto ${title}`}
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="flex grow flex-col p-4 gap-3">
+        <h3 className="text-lg font-semibold text-zinc-50">{title}</h3>
+
+        <p className="grow text-sm text-(--color-text-secondary)">
+          {description}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
           {techs.map((tech) => (
-            <span
+            <Badge
               key={tech}
-              className="rounded bg-gray-200 px-2 py-1 dark:bg-gray-700 dark:text-gray-300"
+              variant="outline"
+              className="text-(--color-text-muted) border-(--color-border-subtle) bg-(--color-surface-elevated)"
             >
               {tech}
-            </span>
+            </Badge>
           ))}
         </div>
+
         <div className="mt-auto flex flex-row gap-3">
-          <Link
-            href={`/projetos/${id}`}
-            className="rounded bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700"
-          >
-            Detalhes
-          </Link>
+          <Button variant="secondary" size="sm" asChild>
+            <Link href={`/projetos/${id}`}>Detalhes</Link>
+          </Button>
+
           {link && (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded bg-gray-300 px-3 py-2 text-sm font-medium dark:bg-gray-700 dark:text-gray-200"
-            >
-              Código
-            </a>
+            <Button variant="outline" size="sm" asChild>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                Código
+              </a>
+            </Button>
           )}
+
           {live && (
-            <a
-              href={live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded bg-green-600 px-3 py-2 text-sm font-medium text-white hover:bg-green-700"
-            >
-              Live
-            </a>
+            <Button variant="outline" size="sm" asChild>
+              <a href={live} target="_blank" rel="noopener noreferrer">
+                Live
+              </a>
+            </Button>
           )}
         </div>
       </div>

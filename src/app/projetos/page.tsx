@@ -1,8 +1,8 @@
 import React from 'react';
-import Container from '@/components/ui/Container';
-import Section from '@/components/ui/Section';
-import Card from '@/components/ui/Card';
-import { projetos } from '@/utils/data';
+import Container from '../../components/ui/Container';
+import Section from '../../components/ui/Section';
+import Card from '../../components/ui/Card';
+import { projetos } from '../../utils/data';
 
 /**
  * Projects listing page. Displays all projects defined in utils/data.ts.

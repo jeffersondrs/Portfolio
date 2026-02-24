@@ -1,86 +1,56 @@
-import { ThemeContext } from '@/context/ThemeProvider';
-import { useContext } from 'react';
-import { motion } from 'framer-motion';
-import { Twitter, Github, Linkedin } from 'lucide-react';
-import Link from 'next/link';
+import { Twitter, Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 interface ThankProps {
   name: string;
 }
 
+const socials = [
+  {
+    href: "https://twitter.com/kalliadranoth",
+    icon: Twitter,
+    label: "Twitter",
+  },
+  { href: "https://github.com/jeffersondrs", icon: Github, label: "GitHub" },
+  {
+    href: "https://www.linkedin.com/in/jeffersondrs/",
+    icon: Linkedin,
+    label: "LinkedIn",
+  },
+];
+
 export default function ThankYouSubmit({ name }: ThankProps) {
-  const { isDark } = useContext(ThemeContext);
-
   return (
-    <div className="flex flex-col items-center justify-center">
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col items-center justify-center"
-      >
-        <h1
-          className={`text-4xl sm:text-2xl font-bold text-center
-        ${isDark ? 'text-white' : 'text-black'}
-        `}
-        >
-          Obrigado por entrar em contato {name.split(' ')[0]}
-        </h1>
-
-        <p
-          className={`text-xl sm:text-2xl text-center
-        ${isDark ? 'text-white' : 'text-black'}
-        `}
-        >
+    <div className="flex flex-col items-center justify-center gap-6 fade-in">
+      <div className="flex flex-col items-center gap-2 text-center">
+        <h2 className="text-3xl sm:text-2xl font-bold text-gradient">
+          Obrigado por entrar em contato, {name.split(" ")[0]}!
+        </h2>
+        <p className="text-lg text-(--color-text-secondary)">
           Em breve retornarei o contato.
         </p>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col items-center justify-center mt-10"
-      >
-        <p
-          className={`text-xl sm:text-2xl text-center
-        ${isDark ? 'text-white' : 'text-black'}
-        `}
-        >
+      </div>
+
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-sm text-(--color-text-muted) text-center">
           Enquanto isso, que tal me seguir nas redes sociais?
         </p>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-row items-center justify-center gap-5 mt-5 rounded-lg p-2"
-      >
-        <Link href="https://twitter.com/kalliadranoth">
-          <Twitter
-            size={60}
-            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-sky-400  ${
-              isDark ? 'text-white' : 'text-sky-500'
-            }
-            `}
-          />
-        </Link>
-        <Link href="https://github.com/jeffersondrs">
-          <Github
-            size={60}
-            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-to-tl from-black to-sky-900  ${
-              isDark ? 'text-white' : 'text-black'
-            }`}
-          />
-        </Link>
 
-        <Link href="https://www.linkedin.com/in/jeffersondrs/">
-          <Linkedin
-            size={60}
-            className={`hover:text-white transition-all duration-300 ease-in-out p-1 rounded-md hover:bg-gradient-radial from-blue-400 to-blue-700
-                ${isDark ? 'text-white' : 'text-blue-500'}`}
-          />
-        </Link>
-      </motion.div>
+        <div className="flex flex-row items-center gap-4">
+          {socials.map(({ href, icon: Icon, label }) => (
+            <Link
+              key={label}
+              href={href}
+              aria-label={label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-(--color-text-secondary) hover:text-zinc-50 transition-colors duration-(--duration-base) p-2 rounded-(--radius-md) hover:bg-(--color-surface-elevated)"
+            >
+              <Icon size={28} />
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

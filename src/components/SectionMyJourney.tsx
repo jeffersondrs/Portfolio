@@ -1,51 +1,66 @@
-import { myJourney } from '@/utils/data';
-import Image from 'next/image';
+import { myJourney } from "../utils/data";
+import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
 
 export default function SectionMyJourney() {
   return (
-    <section className="flex flex-col items-center justify-center w-full h-full py-10">
-      <h1 className="text-xl font-bold mb-4">Minha jornada começou...</h1>
-      <p className="text-sm text-center max-w-lg mb-4">
-        Alguns momentos importantes da minha jornada, e como tudo começou.
-      </p>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical w-full max-w-4xl">
-        {myJourney.map((item, index) => (
-          <li key={index} className="-mb-2">
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
+    <section className="flex flex-col items-center w-full py-10 gap-4 fade-in">
+      <div className="flex flex-col items-center gap-2 text-center">
+        <h2 className="text-xl font-bold text-gradient">
+          Minha jornada começou...
+        </h2>
+        <p className="text-sm text-(--color-text-secondary) max-w-lg">
+          Alguns momentos importantes da minha jornada, e como tudo começou.
+        </p>
+      </div>
+
+      <ul className="relative w-full max-w-3xl mt-8 flex flex-col gap-0">
+        {myJourney.map((item, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <li key={index} className="relative flex w-full mb-10">
+              <div className="absolute left-4 md:left-1/2 top-0 h-full w-px bg-(--color-border) md:-translate-x-1/2" />
+
+              <div className="absolute left-4 md:left-1/2 top-5 md:-translate-x-1/2 w-2.5 h-2.5 rounded-full bg-(--color-surface-elevated) border-2 border-(--color-border-subtle) z-10" />
+
+              <div
+                className={`
+                surface hover-glow ml-10 md:ml-0 w-full md:w-5/12 flex flex-col gap-3 p-4
+                ${
+                  isEven
+                    ? "md:mr-auto md:ml-0 md:pr-8"
+                    : "md:ml-auto md:mr-0 md:pl-8"
+                }
+              `}
               >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div
-              className={`timeline-${index % 2 === 0 ? 'start' : 'end'} mb-10 flex flex-col
-              items-${index % 2 === 0 ? 'end' : 'start'}
-               justify-center w-full max-w-4xl gap-2 px-4 py-2
-                `}
-            >
-              <time className="font-mono italic">{item.date}</time>
-              <div className="text-lg font-black mb-2">{item.title}</div>
-              <p className="text-sm">{item.description}</p>
-              <Image
-                src={item.image}
-                alt={`Imagem de ${item.date}`}
-                width={500}
-                height={500}
-                layout="responsive"
-                className="shadow object-cover filter mt-2 w-full h-full"
-              />
-            </div>
-            <hr />
-          </li>
-        ))}
+                <time className="font-mono text-xs italic text-(--color-text-muted)">
+                  {item.date}
+                </time>
+
+                <h3 className="text-base font-bold text-zinc-50">
+                  {item.title}
+                </h3>
+
+                <Separator className="bg-(--color-border)" />
+
+                <p className="text-sm text-(--color-text-secondary) leading-relaxed">
+                  {item.description}
+                </p>
+
+                {item.image && (
+                  <div className="relative w-full h-44 mt-1 rounded-(--radius-md) overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={`Imagem de ${item.date}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

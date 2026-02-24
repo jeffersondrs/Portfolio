@@ -1,9 +1,9 @@
-import { ThemeContext } from '@/context/ThemeProvider';
-import { useContext } from 'react';
-import Link from 'next/link';
-import { MoveRight } from 'lucide-react';
-import { Carroucel } from './Carroucel';
-import { ProjectLayoutProps } from '@/types/global-types';
+import Link from "next/link";
+import { MoveRight } from "lucide-react";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Carroucel } from "./Carroucel";
+import { ProjectLayoutProps } from "../types/global-types";
 
 export default function ProjectLayout({
   projectId,
@@ -12,45 +12,42 @@ export default function ProjectLayout({
   projectName,
   projectTechs,
 }: ProjectLayoutProps) {
-  const { isDark } = useContext(ThemeContext);
-
   return (
-    <div
-      className={` ${
-        isDark
-          ? 'bg-gray-900 text-white hover:shadow-sm hover:bg-gray-800'
-          : 'bg-gray-200 text-black hover:shadow-sm hover:bg-slate-50'
-      }
-    w-full overflow-hidden shadow-lg transition-all duration-500 ease-in-out text-gray-100  flex flex-col justify-center items-center hover:scale-[101%] transform hover:shadow-2xl gap-2 h-full md:flex-row
-    `}
-      key={projectId}
-    >
-      <section
-        className={`
-        flex flex-col justify-start lg:justify-center items-start w-full h-full text-black px-6 py-3 gap-3 tracking-wider ${isDark ? 'text-white' : 'text-black'}
-      `}
-      >
-        <h1 className="text-lg font-bold">{projectName}</h1>
-        <div className="text-xs flex flex-row items-center gap-3 flex-wrap">
-          {projectTechs?.map((tech) => <p key={tech}>{tech}</p>)}
-          <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+    <div className="surface hover-glow w-full overflow-hidden transition-transform duration-(--duration-slow) hover:scale-[101%] flex flex-col md:flex-row h-full">
+      <section className="flex flex-col justify-start lg:justify-center items-start w-full h-full px-6 py-5 gap-4 tracking-wider">
+        <h2 className="text-lg font-bold text-zinc-50">{projectName}</h2>
+
+        <div className="flex flex-row items-center gap-2 flex-wrap">
+          {projectTechs?.map((tech) => (
+            <Badge
+              key={tech}
+              variant="outline"
+              className="text-(--color-text-muted) border-(--color-border-subtle) bg-(--color-surface-elevated)"
+            >
+              {tech}
+            </Badge>
+          ))}
         </div>
-        <p className="text-xs text-start max-w-xl">
-          {projectDescription || 'Descrição'}
+
+        <p className="text-sm text-(--color-text-secondary) max-w-xl">
+          {projectDescription || "Descrição"}
         </p>
-        <div className="w-full flex flex-col justify-start items-center">
+
+        <Button variant="secondary" size="sm" asChild>
           <Link
             href={`/projetos/${projectId}`}
-            className="flex flex-row justify-between items-center bg-gray-700 hover:bg-gray-800  text-white py-3 px-5 transition-all gap-3 hover:gap-5 duration-500 ease-in-out shadow-md"
+            className="flex items-center gap-3 group"
           >
-            <button type="button" className="text-xs">
-              Ver mais
-            </button>
-            <MoveRight size={18} />
+            <span className="text-xs">Ver mais</span>
+            <MoveRight
+              size={16}
+              className="transition-transform duration-(--duration-base) group-hover:translate-x-1"
+            />
           </Link>
-        </div>
+        </Button>
       </section>
-      <aside className="flex flex-row justify-center items-center w-full max-w-2xl h-full overflow-hidden">
+
+      <aside className="flex justify-center items-center w-full max-w-2xl h-full overflow-hidden">
         <Carroucel images={projectImage} />
       </aside>
     </div>

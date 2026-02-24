@@ -1,7 +1,7 @@
 import React from 'react';
-import Container from '@/components/ui/Container';
-import Section from '@/components/ui/Section';
-import Contact from '@/components/FormContact';
+import Container from '../../components/ui/Container';
+import Section from '../../components/ui/Section';
+import Contact from '../../components/FormContact';
 
 /**
  * Contact page. Wraps the existing contact form in a full page.

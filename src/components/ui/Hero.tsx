@@ -2,36 +2,37 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-/**
- * Hero section for the homepage. Presents your name, a short tagline, and calls to action.
- */
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center gap-6 py-20">
+    <section className="flex flex-col items-center justify-center text-center gap-6 py-20 w-full fade-in">
       <Image
-        src="/mepng.png"
+        src="/perfil.png"
         alt="Jefferson Santos"
         width={200}
         height={200}
-        className="rounded-full shadow-lg"
+        className="rounded-full shadow-lg ring-2 ring-zinc-800"
       />
-      <h1 className="text-4xl font-bold">Jefferson Santos</h1>
-      <p className="max-w-md text-lg text-gray-600 dark:text-gray-400">
-        Desenvolvedor Full Stack apaixonado por construir experiências web e mobile.
+
+      <h1 className="text-4xl font-bold text-gradient">Jefferson Santos</h1>
+
+      <p className="max-w-md text-lg text-zinc-400">
+        Desenvolvedor Full Stack apaixonado por construir experiências web e
+        mobile.
       </p>
+
       <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/projetos"
-            className="rounded bg-blue-600 px-6 py-3 text-sm font-medium text-white shadow-md transition-colors hover:bg-blue-700"
-          >
-            Ver Projetos
-          </Link>
-          <Link
-            href="/contato"
-            className="rounded border border-blue-600 px-6 py-3 text-sm font-medium text-blue-600 shadow-md transition-colors hover:bg-blue-50 dark:hover:bg-gray-800"
-          >
-            Contato
-          </Link>
+        <Link
+          href="/projetos"
+          className="surface hover-glow rounded-lg px-6 py-3 text-sm font-medium text-zinc-50 shadow-md transition-colors"
+        >
+          Ver Projetos
+        </Link>
+        <Link
+          href="/contato"
+          className="rounded-lg border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-400 shadow-md hover-glow transition-colors"
+        >
+          Contato
+        </Link>
       </div>
     </section>
   );
