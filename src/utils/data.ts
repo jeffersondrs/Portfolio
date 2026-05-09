@@ -141,7 +141,7 @@ export const myJourney: JourneyProps[] = [
     title: 'Fevereiro de 2022',
     description: `Ingressei na faculdade de Análise e Desenvolvimento de Sistemas, na Universidade Veiga de Almeida. Comecei a estudar Java, SQL, UML e outras tecnologias. Fiz um estágio no Ministério Público do Trabalho (MPT). Foi uma experiência incrível, onde pude aprender muito sobre desenvolvimento de sistemas e sobre o funcionamento do MPT. Nessa mesma época, comecei a estudar Javascript e depois de dominar o básico, comecei a estudar React.`,
     image:
-      'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1764092768723-738bba5645e8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     date: '2022',
